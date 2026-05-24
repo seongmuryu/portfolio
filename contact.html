@@ -62,7 +62,7 @@
                 </div>
                 <div class="contact-info-details">
                   <h5>연구실 위치</h5>
-                  <p>충청남도 천안시 동남구 병천면 충절로 1600<br>한국기술교육대학교 공학관 연구원실</p>
+                  <p>충청남도 천안시 동남구 병천면 충절로 1600<br>한국기술교육대학교 공학1관 4층 연구실</p>
                 </div>
               </div>
 
@@ -93,12 +93,14 @@
               </div>
             </div>
 
-            <!-- 가상 지도 플레이스홀더 -->
-            <div class="glass-panel map-placeholder-card" style="margin-top: 40px;">
-              <div>
-                <i class="fas fa-map-marked-alt"></i>
+            <!-- 가상 지도 카드 (이미지 자동 연동 & 폴백 장치 내장) -->
+            <div class="glass-panel map-placeholder-card" style="margin-top: 40px; padding: 0; display: flex; flex-direction: column; overflow: hidden; height: 320px; position: relative;">
+              <img src="assets/koreatech_map.png" alt="한국기술교육대학교 캠퍼스 맵" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 16px;" onerror="this.style.display='none'; document.getElementById('map-fallback').style.display='flex';">
+              <div id="map-fallback" style="display: flex; width: 100%; height: 100%; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; background: radial-gradient(circle at center, #1b2030 0%, var(--bg-surface) 100%); border-radius: 16px;">
+                <i class="fas fa-map-marked-alt" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 12px; animation: floatAnim 3s infinite ease-in-out;"></i>
                 <h5>KOREATECH Campus Map</h5>
-                <p class="map-desc">한국기술교육대학교 공학관 3공학관 또는 4공학관 내 연구실</p>
+                <p class="map-desc">assets/koreatech_map.png 이미지를 저장하시면 지도가 나타납니다.</p>
+                <p class="map-desc" style="font-size: 0.8rem; margin-top: 6px; color: var(--primary);">위치: 공학1관 4층 연구실</p>
               </div>
             </div>
           </div>
@@ -169,7 +171,7 @@
         <div class="footer-contact">
           <div class="footer-contact-item">
             <i class="fas fa-university"></i>
-            <span>충청남도 천안시 동남구 병천면 충절로 1600 공학관</span>
+            <span>충청남도 천안시 동남구 병천면 충절로 1600 공학1관 4층</span>
           </div>
           <div class="footer-contact-item">
             <i class="fas fa-envelope"></i>
