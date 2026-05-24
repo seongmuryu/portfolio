@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연락처 | 유성무 연구자 포트폴리오</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- --- Header / Nav --- -->
+  <header class="header scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        유성무 <span class="text-gradient">Seong-Mu Ryu</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">홈</a>
+        <a href="about.html" class="nav-link">소개</a>
+        <a href="research.html" class="nav-link">연구</a>
+        <a href="awards.html" class="nav-link">수상·자격증</a>
+        <a href="contact.html" class="nav-link">연락처</a>
+      </nav>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- Subpage Banner --- -->
+  <section class="subpage-banner">
+    <div class="container">
+      <div class="banner-content fade-in-up">
+        <span class="section-tag">Get in Touch</span>
+        <h1 class="banner-title">연락처 및 협력 문의</h1>
+        <p class="banner-desc">
+          공동 연구 제안, 산학 연구 과제 논의 및 학술적 피드백을 기쁘게 받겠습니다. 아래 메시지 폼 또는 메일로 연락해 주십시오.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Main Contact Content --- -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- 연락처 정보 및 가상 지도 (좌측) -->
+        <div class="contact-left fade-in-up">
+          <div class="glass-panel contact-info-card">
+            <h3 class="timeline-section-title" style="margin-bottom: 30px;">
+              <i class="fas fa-address-book"></i> 연구실 연락처 정보
+            </h3>
+            
+            <div class="contact-info-list">
+              <!-- 주소 -->
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-info-details">
+                  <h5>연구실 위치</h5>
+                  <p>충청남도 천안시 동남구 병천면 충절로 1600<br>한국기술교육대학교 공학관 연구원실</p>
+                </div>
+              </div>
+
+              <!-- 이메일 -->
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <div class="contact-info-details">
+                  <h5>이메일 문의</h5>
+                  <a href="mailto:tjdan2231@koreatech.ac.kr">tjdan2231@koreatech.ac.kr</a>
+                </div>
+              </div>
+
+              <!-- 학술 네트워크 -->
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fas fa-share-nodes"></i>
+                </div>
+                <div class="contact-info-details">
+                  <h5>학술 연구 소셜 링크</h5>
+                  <div style="display: flex; gap: 12px; margin-top: 10px;">
+                    <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub" style="width: 32px; height: 32px;"><i class="fab fa-github"></i></a>
+                    <a href="https://scholar.google.com" target="_blank" class="social-icon" aria-label="Google Scholar" style="width: 32px; height: 32px;"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://orcid.org" target="_blank" class="social-icon" aria-label="ORCID" style="width: 32px; height: 32px;"><i class="fab fa-orcid"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 가상 지도 플레이스홀더 -->
+            <div class="glass-panel map-placeholder-card" style="margin-top: 40px;">
+              <div>
+                <i class="fas fa-map-marked-alt"></i>
+                <h5>KOREATECH Campus Map</h5>
+                <p class="map-desc">한국기술교육대학교 공학관 3공학관 또는 4공학관 내 연구실</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 연락처 메시지 입력 폼 (우측) -->
+        <div class="contact-right fade-in-up delay-200">
+          <div class="glass-panel contact-right-card">
+            <h3 class="form-title">
+              <i class="fas fa-paper-plane"></i> 학술 협력 및 연구 문의 메일 발송
+            </h3>
+            
+            <form id="portfolio-contact-form" autocomplete="off">
+              <div class="form-grid">
+                <!-- 이름 -->
+                <div class="form-group">
+                  <label for="form-name" class="form-label">성함</label>
+                  <input type="text" id="form-name" class="form-control" placeholder="홍길동" required>
+                </div>
+                
+                <!-- 소속 -->
+                <div class="form-group">
+                  <label for="form-org" class="form-label">소속 / 기관명</label>
+                  <input type="text" id="form-org" class="form-control" placeholder="OO대학교 / OO연구소" required>
+                </div>
+              </div>
+
+              <!-- 회신 메일 -->
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="form-email" class="form-label">회신 받으실 이메일 주소</label>
+                <input type="email" id="form-email" class="form-control" placeholder="yourmail@example.com" required>
+              </div>
+
+              <!-- 제목 -->
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="form-subject" class="form-label">문의 제목</label>
+                <input type="text" id="form-subject" class="form-control" placeholder="공동 연구 또는 산학 협력 문의의 건" required>
+              </div>
+
+              <!-- 내용 -->
+              <div class="form-group full-width" style="margin-bottom: 30px;">
+                <label for="form-message" class="form-label">문의 메시지 내용</label>
+                <textarea id="form-message" class="form-control" placeholder="연구 협력 제안 및 상세 문의 사양에 대해 상세히 작성해 주세요." required></textarea>
+              </div>
+
+              <!-- 발송 버튼 -->
+              <button type="submit" class="submit-btn">
+                메시지 전송하기 <i class="fas fa-chevron-right"></i>
+              </button>
+
+              <!-- 모의 발송 성공 팝업 배너 -->
+              <div id="form-status" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Footer --- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h5>유성무 | Seong-Mu Ryu</h5>
+          <p>한국기술교육대학교 전기전자통신공학부 석사과정 연구자 포트폴리오입니다. 성실과 전문성으로 미래 학술 발전에 기여하겠습니다.</p>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            <i class="fas fa-university"></i>
+            <span>충청남도 천안시 동남구 병천면 충절로 1600 공학관</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>tjdan2231@koreatech.ac.kr</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2026 유성무. All rights reserved.
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://scholar.google.com" target="_blank" class="social-icon" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://orcid.org" target="_blank" class="social-icon" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
