@@ -272,6 +272,72 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
 .svc b { font-size: 16px; }
 .svc span { color: var(--sub); font-size: 13px; }
 
+/* accounts */
+.util-bar { border-bottom: 1px solid var(--line); }
+.util-bar .wrap { display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: 2px 16px; min-height: 32px; padding-block: 2px; font-size: 12px; color: var(--sub); }
+.util-bar a, .linkbtn { color: var(--sub); text-decoration: none; background: none; border: none; padding: 4px 0; cursor: pointer; font-size: 12px; font-family: inherit; }
+.util-bar a:hover, .linkbtn:hover { color: var(--ink); text-decoration: underline; }
+.util-bar b { color: var(--ink); font-weight: 500; }
+.auth { display: flex; flex-wrap: wrap; gap: 40px; padding-block: 44px 72px; align-items: flex-start; justify-content: center; }
+.auth-form { flex: 1 1 340px; max-width: 420px; display: flex; flex-direction: column; gap: 14px; }
+.auth-form h1, .gatebox h1 { margin: 0; font-size: 26px; }
+.auth-links { display: flex; justify-content: center; gap: 14px; font-size: 13px; color: var(--sub); }
+.auth-links a { color: var(--sub); }
+.demo-acc { flex: 1 1 340px; max-width: 480px; display: flex; flex-direction: column; gap: 10px; background: var(--soft); border-radius: 10px; padding: 20px; }
+.demo-acc p { margin: 0; font-size: 13px; color: var(--sub); }
+.acc-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 8px; }
+.acc { text-align: left; border: 1px solid #CFD0D4; border-radius: 8px; background: #FFFFFF; padding: 14px; cursor: pointer; display: flex; flex-direction: column; gap: 2px; font-family: inherit; }
+.acc:hover { border-color: var(--ink); }
+.acc-role { font-size: 12px; font-weight: 700; color: var(--blue); }
+.acc b { font-size: 15px; }
+.acc small { color: var(--sub); font-size: 12px; }
+.gatebox { max-width: 640px; margin: 0 auto; padding-block: 56px 80px; display: flex; flex-direction: column; gap: 14px; }
+.gatebox > p { margin: 0; color: var(--ink-2); }
+.gatebox .demo-acc { max-width: none; }
+.acct { display: flex; flex-wrap: wrap; gap: 32px; padding-block: 28px 64px; align-items: flex-start; }
+.acct-nav { flex: 1 1 200px; max-width: 220px; display: flex; flex-direction: column; border-top: 2px solid var(--ink); }
+.acct-nav > b { padding: 14px 4px; font-size: 18px; border-bottom: 1px solid var(--line); }
+.acct-nav a { display: flex; justify-content: space-between; gap: 8px; padding: 12px 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink-2); }
+.acct-nav a.on { font-weight: 700; color: var(--ink); }
+.acct-nav .cnt { color: var(--sub); font-weight: 400; font-size: 13px; }
+.acct-main { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.acct-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; background: var(--soft); border-radius: 10px; padding: 20px 22px; }
+.acct-head span { font-size: 13px; color: var(--sub); }
+.acct-head h1 { margin: 2px 0 0; font-size: 22px; }
+.stat-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.stat { background: #FFFFFF; border-radius: 8px; padding: 10px 16px; min-width: 120px; display: flex; flex-direction: column; }
+.stat small { font-size: 12px; color: var(--sub); }
+.stat b { font-size: 20px; }
+.pill { display: inline-block; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 3px 9px; background: var(--line); color: var(--ink-2); white-space: nowrap; }
+.pill.blue { background: #E3EEFB; color: #174EA6; }
+.pill.green { background: #E2F3E9; color: #00612F; }
+.pill.orange { background: #FDEFD9; color: #8A3E05; }
+.pill.dark { background: var(--ink); color: #FFFFFF; }
+.stages { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.stages button { border: none; border-right: 1px solid var(--line); background: #FFFFFF; padding: 12px 14px; text-align: left; cursor: pointer; display: flex; flex-direction: column; gap: 2px; font-family: inherit; }
+.stages button:last-child { border-right: none; }
+.stages button.on { background: var(--soft); box-shadow: inset 0 -2px 0 var(--ink); }
+.stages small { font-size: 12px; color: var(--sub); }
+.stages b { font-size: 22px; }
+.qcard { border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; }
+.qcard .top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+.qcard .ans { background: var(--soft); border-radius: 6px; padding: 10px 12px; font-size: 14px; }
+.reply { display: flex; flex-wrap: wrap; gap: 6px; }
+.reply input { height: 36px; border: 1px solid #CFD0D4; border-radius: 6px; padding: 0 10px; min-width: 0; }
+.wishbtn { border: none; background: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #4A4B50; min-height: 32px; font-family: inherit; }
+.wishbtn.on { color: var(--bad); font-weight: 700; }
+.btn.wishbtn { border: 1px solid #C9CACE; }
+.card-foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.bo-top .bo-out { color: #FFFFFF; border: 1px solid #6F86A6; padding: 4px 10px; background: none; cursor: pointer; font-size: 13px; font-family: inherit; }
+.bo-btn.sm { height: 30px; padding: 0 10px; font-size: 13px; }
+.bo-link { color: var(--navy); font-weight: 700; }
+.bo-panel { border: 1px solid #D9D9D9; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.bo-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); border: 1px solid #D9D9D9; }
+.bo-stats div { padding: 12px 14px; border-right: 1px solid #D9D9D9; display: flex; flex-direction: column; }
+.bo-stats div:last-child { border-right: none; }
+.bo-stats small { font-size: 12px; color: #555555; }
+.bo-stats b { font-size: 22px; }
+
 /* footer */
 .site-footer { background: #F8F8F9; border-top: 1px solid var(--line); }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-block: 28px 36px; font-size: 12px; line-height: 1.8; color: var(--sub); }
@@ -345,6 +411,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     <span>사업계획용 시안 · 가격과 측정값은 모두 예시</span>
     <a href="#home" data-demo="shop">구매자 사이트</a>
     <a href="#verify" data-demo="verify">QR 진위확인</a>
+    <a href="#seller" data-demo="seller">판매자 센터</a>
     <a href="#lab" data-demo="lab">시험기관 업무화면</a>
   </div>
 </div>
@@ -459,14 +526,16 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     P('EVC-2611-00031', '쉐보레', '볼트 EV', 2020, 5.5, 450000, { ins: 1100, eff: 94.1, pf: 0.99, out: 98, rip: 3.2, temp: 41 }, ['10.24', '10.31', '11.07', '11.13'], [9], 'obc'),
     P('EVC-2610-00027', '기아', '쏘울 EV', 2019, 8.7, 210000, { ins: 300, eff: 91.0, pf: 0.98, out: 93, rip: 4.8, temp: 52 }, ['10.06', '10.13', '10.24', '10.27'], [9], 'obc')
   );
-  PARTS.forEach(function (p) {
+  function prep(p) {
     var ev = evaluate(p.v, TYPES[p.type].items);
     p.ev = ev; p.grade = ev.grade;
     p.use = GRADE[p.grade].use;
     p.effPct = p.v.eff; p.tqPct = Math.round(p.v.tq / REF.tq * 1000) / 10;
     p.report = 'TR-2026-' + p.d[2].replace('.', '') + '-' + p.id.slice(-4);
     p.testDate = '2026.' + p.d[2];
-  });
+    p.ver = p.ver || 1; p.revs = p.revs || [];
+  }
+  PARTS.forEach(prep);
   var byId = {}; PARTS.forEach(function (p) { byId[p.id] = p; });
   var CARS = []; PARTS.forEach(function (p) { var k = p.maker + '|' + p.car; if (CARS.indexOf(k) < 0) CARS.push(k); });
   function carOptions(sel) { return '<option value="">차종 선택</option>' + CARS.map(function (k) { var a = k.split('|'); return '<option value="' + k + '"' + (sel === k ? ' selected' : '') + '>' + a[0] + ' ' + a[1] + '</option>'; }).join(''); }
@@ -489,9 +558,10 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       return { l: it.name.replace(/ \(.*\)/, ''), s: it.short, v: fmt(v) + (it.unit === '%' ? '%' : ' ' + it.unit), d: '기준 ' + crit(it) };
     });
   }
-  function typeCount(t) { return PARTS.filter(function (p) { return p.type === t; }).length; }
+  function live() { return PARTS.filter(function (p) { return !p.sold; }); }
+  function typeCount(t) { return live().filter(function (p) { return p.type === t; }).length; }
   function typeRows() {
-    return '<button type="button" class="tbtn' + (!state.type ? ' on' : '') + '" data-type=""><span>전체</span><span class="cnt">' + PARTS.length + '</span></button>' +
+    return '<button type="button" class="tbtn' + (!state.type ? ' on' : '') + '" data-type=""><span>전체</span><span class="cnt">' + live().length + '</span></button>' +
       Object.keys(TYPES).map(function (k) { return '<button type="button" class="tbtn' + (state.type === k ? ' on' : '') + '" data-type="' + k + '"><span>' + TYPES[k].name + '</span><span class="cnt">' + typeCount(k) + '</span></button>'; }).join('');
   }
   function fitBox(p) {
@@ -532,7 +602,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
   /* ---------- shared chrome ---------- */
   function header(active) {
     var nav = [['list', '부품 찾기'], ['standard', '인증 기준'], ['verify', '성적서 진위확인'], ['labs', '시험기관 안내'], ['sell', '판매 등록'], ['compare', '비교함 ' + state.compare.length]];
-    return '<header class="site-header"><div class="wrap">' +
+    return '<header class="site-header"><div class="util-bar"><div class="wrap">' + util() + '</div></div><div class="wrap">' +
       '<a class="logo" href="#home">EV부품이력<small>가칭</small></a>' +
       '<nav class="gnb" aria-label="주 메뉴">' + nav.map(function (n) { return '<a href="#' + n[0] + '"' + (n[0] === active ? ' class="on" aria-current="page"' : '') + '>' + n[1] + '</a>'; }).join('') + '</nav>' +
       '<form class="search" id="topSearch" role="search"><label class="sr" for="q">부품 검색</label><input id="q" type="search" placeholder="품번, 고유번호, 차종으로 검색" value="' + esc(state.q) + '"><button class="icon-btn" type="submit" aria-label="검색">' + ICON_SEARCH + '</button></form>' +
@@ -549,13 +619,50 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
   }
   function shop(active, body) { return header(active) + '<main>' + body + '</main>' + footer(); }
 
+  /* ---------- accounts ---------- */
+  var TODAY = '2026.11.14';
+  var ACCOUNTS = {
+    buyer: { key: 'buyer', role: 'buyer', id: 'buyer', name: '박OO', org: '다온농기계', label: '구매자', phone: '010-2345-6789' },
+    seller: { key: 'seller', role: 'seller', id: 'seller', name: '최OO', org: '가나재제조', label: '판매자', phone: '010-3456-7890' },
+    lab: { key: 'lab', role: 'lab', id: 'lab', name: '김OO', org: '경북테크노파크', label: '시험원' },
+    tm: { key: 'tm', role: 'tm', id: 'tm', name: '이OO', org: '경북테크노파크', label: '기술책임자' }
+  };
+  var ROLE_HOME = { buyer: 'my', seller: 'seller', lab: 'lab', tm: 'lab-approve' };
+  function loadUser() { try { var k = localStorage.getItem('evp-user'); return k && ACCOUNTS[k] ? ACCOUNTS[k] : null; } catch (e) { return null; } }
+  function saveUser(k) { try { if (k) localStorage.setItem('evp-user', k); else localStorage.removeItem('evp-user'); } catch (e) {} }
+
   /* ---------- state ---------- */
-  var state = { type: '', myCar: null, compare: [], car: '', q: '', maker: '', year: '', grades: { A: true, B: true, C: false }, use: '전체', sort: 'recent', page: 1, tab: 'test', photo: 0, qa: {} };
+  var state = { user: loadUser(), wish: ['EVM-2611-00417', 'EVI-2611-00102'], next: '', sstage: '', type: '', myCar: null, compare: [], car: '', q: '', maker: '', year: '', grades: { A: true, B: true, C: false }, use: '전체', sort: 'recent', page: 1, tab: 'test', photo: 0, qa: {} };
+
+  /* ---------- seed records (example data) ---------- */
+  var OST = ['입금 대기', '결제 완료', '배송 중', '배송 완료', '구매확정'];
+  var OPILL = { '입금 대기': '', '결제 완료': 'blue', '배송 중': 'blue', '배송 완료': 'orange', '구매확정': 'green' };
+  var ORDERS = [
+    { no: 'OD-2026-110801', id: 'EVM-2610-00296', date: '2026.11.08', price: 1120000, pay: '무통장 입금', payKey: 'bank', ship: '화물 배송 (착불)', st: '배송 완료', buyer: 'buyer' }
+  ];
+  byId['EVM-2610-00296'].sold = true;
+  var QUOTES = [
+    { no: 'Q-2026-111201', id: 'EVM-2611-00421', date: '2026.11.12', qty: 3, use: '소형 운반차', company: '다온농기계', name: '박OO', st: '회신 완료', reply: '3대 기준 개당 950,000원입니다. 11월 20일 출고 가능합니다.', buyer: 'buyer' },
+    { no: 'Q-2026-111302', id: 'EVI-2611-00102', date: '2026.11.13', qty: 2, use: '산업용 구동', company: '한결모빌리티', name: '정OO', st: '접수', reply: '', buyer: 'other' }
+  ];
+  var SETTLE = [
+    { no: 'OD-2026-103001', part: '니로 EV 구동모터 · EVM-2610-00275', date: '2026.10.30', price: 1050000, st: '정산 완료' },
+    { no: 'OD-2026-110201', part: '쏘울 EV OBC · EVC-2610-00019', date: '2026.11.02', price: 230000, st: '정산 완료' }
+  ];
+  var RECEIPTS = [
+    { no: 'RC-2026-1110-0452', pid: 'EVM-2611-00452', type: 'motor', maker: '현대', car: '코나 일렉트릭', year: 2021, km: 4.8, price: 1850000, date: '2026-11-10', recv: '11.05', st: 'testing', imgs: [1, 4],
+      v: { ins: 1640, wind: 1.3, nl: 4.4, eff: 94.2, tq: 258, res: 0.27, vib: '', noise: '' }, files: [['dyno_log_EVM-2611-00452.csv', '2.2MB', '5c81e0aa…71d3']] },
+    { no: 'RC-2026-1112-0061', pid: 'EVR-2611-00061', type: 'reducer', maker: '기아', car: 'EV6 후륜', year: 2022, km: 3.0, price: 520000, date: '2026-11-12', recv: '11.07', st: 'review', imgs: [7, 8], writer: '김OO', reqDate: '2026-11-13',
+      v: { eff: 96.5, bl: 9, vib: 2.6, noise: 71, oil: 40, leak: 0 }, files: [['reducer_bench_EVR-2611-00061.csv', '1.6MB', '9be2f410…0c5a']] },
+    { no: 'RC-2026-1113-0115', pid: 'EVI-2611-00115', type: 'inverter', maker: '기아', car: '니로 EV', year: 2020, km: 6.9, price: 450000, date: '2026-11-13', recv: '11.09', st: 'received', imgs: [5, 6], v: {}, files: [] }
+  ];
+  function rcpt(no) { return RECEIPTS.filter(function (r) { return r.no === no; })[0]; }
 
   /* ---------- list ---------- */
   function filtered() {
     var q = state.q.trim().toLowerCase();
     var list = PARTS.filter(function (p) {
+      if (p.sold) return false;
       if (!state.grades[p.grade]) return false;
       if (state.type && p.type !== state.type) return false;
       if (state.maker && p.maker !== state.maker) return false;
@@ -571,7 +678,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
   function viewList() {
     var makers = Array.from(new Set(PARTS.map(function (p) { return p.maker; })));
     var years = Array.from(new Set(PARTS.map(function (p) { return p.year; }))).sort().reverse();
-    var gc = { A: 0, B: 0, C: 0 }; PARTS.forEach(function (p) { gc[p.grade]++; });
+    var gc = { A: 0, B: 0, C: 0 }; live().forEach(function (p) { gc[p.grade]++; });
     var list = filtered();
     var uses = ['전체', '차량 수리', '농기계', '소형 운반차', '산업용 구동', '재제조'];
     var html = '<div class="wrap shop">' +
@@ -608,13 +715,13 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       '<div class="meta"><span class="cat">' + TYPES[p.type].cat + '</span><span class="ttl">' + pname(p) + '</span><span class="sub2">' + p.maker + ' · ' + p.year + '년식 · ' + p.km + '만km</span><span class="code">' + p.id + '</span></div>' +
       '<div class="pr">' + gBadge(p.grade, true) + '<span class="price num">' + won(p.price) + '<small style="font-size:13px;font-weight:500">원</small></span></div>' +
       '<div class="tags">' + fitTag + tagsFor(p).map(function (t) { return '<span class="tag">' + t + '</span>'; }).join('') + '</div></a>' +
-      '<label class="cmp" for="cmp-' + p.id + '"><input type="checkbox" id="cmp-' + p.id + '" data-cmp="' + p.id + '"' + (inCmp ? ' checked' : '') + '> 비교함에 담기</label></div>';
+      '<div class="card-foot"><label class="cmp" for="cmp-' + p.id + '"><input type="checkbox" id="cmp-' + p.id + '" data-cmp="' + p.id + '"' + (inCmp ? ' checked' : '') + '> 비교함에 담기</label>' + wishBtn(p.id) + '</div></div>';
   }
 
   /* ---------- detail ---------- */
   function history(p) {
     return [
-      ['2026.' + p.d[0], '차량에서 회수 · 고유번호 부여', '[재제조사명]'],
+      ['2026.' + p.d[0], '차량에서 회수 · 고유번호 부여', '가나재제조'],
       ['2026.' + p.d[1], '시험기관 입고 · 봉인 라벨 부착', '경북테크노파크'],
       ['2026.' + p.d[2], '성능 시험', '김OO 시험원'],
       ['2026.' + p.d[3], '성적서 발행 · 판매 등록', '이OO 기술책임자 승인']
@@ -635,7 +742,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     }
     if (t === 'history') {
       return '<section style="display:flex;flex-direction:column;gap:12px"><h2 class="h-sec">부품 이력</h2><ol class="timeline">' + history(p).map(function (h) { return '<li><time class="num">' + h[0] + '</time><span style="font-weight:500">' + h[1] + '</span><span>' + h[2] + '</span></li>'; }).join('') + '</ol>' +
-        '<div class="note">성적서와 이력은 수정되면 이전 버전과 수정 사유가 함께 남습니다. 현재 버전: v1 (최초 발행)</div></section>';
+        '<div class="note">성적서와 이력은 수정되면 이전 버전과 수정 사유가 함께 남습니다. 현재 버전: v' + p.ver + (p.revs.length ? ' (정정 발행: ' + p.revs.map(function (r) { return 'v' + r.ver + ' ' + r.date + ' · ' + esc(r.reason); }).join(', ') + ')' : ' (최초 발행)') + '</div></section>';
     }
     if (t === 'check') {
       return '<section style="display:flex;flex-direction:column;gap:12px"><h2 class="h-sec">구매 전 확인사항</h2><ul class="note" style="margin:0;padding-left:38px;display:flex;flex-direction:column;gap:8px">' +
@@ -691,14 +798,14 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
           '<div><small>주의·부적합</small><b style="color:' + (p.ev.issues.length ? GRADE[p.grade].color : 'var(--ink)') + '">' + issue + '</b><em>' + (p.ev.issues.length ? issueText(p) : '모든 항목 적합') + '</em></div></div>' +
           '<div class="cert-f"><span>성적서 ' + p.report + ' · 원본 데이터 일치</span><a href="#report-' + p.id + '">성적서 보기 ›</a></div></section>' +
         '<section style="display:flex;flex-direction:column;gap:8px"><h2 style="margin:0;font-size:14px">배송방법</h2><div class="ship"><div><b>화물 배송 (착불)</b><small>중량물 화물 배송, 운임은 수령 시 지불</small></div><div><b>방문 수령</b><small>보관 창고에서 직접 수령 · [창고 위치]</small></div></div></section>' +
-        '<div class="cta"><a class="btn" href="#quote-' + p.id + '">견적 문의</a><a class="btn dark" href="#order-' + p.id + '">바로 구매</a></div>' +
-        '<button class="btn sm" type="button" data-cmpbtn="' + p.id + '">' + (state.compare.indexOf(p.id) >= 0 ? '비교함에서 빼기' : '다른 부품과 측정값 비교하기') + '</button>' +
+        (p.sold ? '<div class="note"><b>판매가 완료된 부품입니다.</b> 같은 차종의 다른 부품을 찾아보세요.</div>' : '<div class="cta"><a class="btn" href="#quote-' + p.id + '">견적 문의</a><a class="btn dark" href="#order-' + p.id + '">바로 구매</a></div>') +
+        '<div style="display:flex;flex-wrap:wrap;gap:8px">' + wishBtn(p.id, true) + '<button class="btn sm" type="button" data-cmpbtn="' + p.id + '">' + (state.compare.indexOf(p.id) >= 0 ? '비교함에서 빼기' : '다른 부품과 측정값 비교하기') + '</button></div>' +
       '</div></div>' +
       '<div class="dbottom"><div class="dmain"><div class="tabs" role="tablist" aria-label="상세 정보">' + tabs.map(function (t) { return '<button type="button" role="tab" id="tab-' + t[0] + '" aria-selected="' + (state.tab === t[0]) + '" aria-controls="tabpanel" data-tab="' + t[0] + '">' + t[1] + '</button>'; }).join('') + '</div>' +
         '<div id="tabpanel" role="tabpanel" aria-labelledby="tab-' + state.tab + '">' + tabContent(p) + '</div></div>' +
         '<aside class="side" aria-label="주문 요약"><span style="font-size:13px;color:var(--sub)">' + p.maker + ' / ' + p.car + ' (' + p.year + ')</span><b style="font-size:18px">' + TYPES[p.type].full + '</b><span style="color:var(--blue)">' + p.id + '</span>' +
           '<div class="tot"><span style="font-size:13px">총 상품금액</span><b class="num">' + won(p.price) + '<small style="font-size:14px;font-weight:500">원</small></b></div>' +
-          '<a class="btn" href="#quote-' + p.id + '">견적 문의</a><a class="btn dark" href="#order-' + p.id + '">바로 구매</a></aside></div></div>';
+          (p.sold ? '<div class="note">판매 완료</div>' : '<a class="btn" href="#quote-' + p.id + '">견적 문의</a><a class="btn dark" href="#order-' + p.id + '">바로 구매</a>') + '</aside></div></div>';
     return shop('list', html);
   }
 
@@ -708,9 +815,10 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
   }
   function viewQuote(id) {
     var p = byId[id]; if (!p) return viewNotFound();
+    if (p.sold) return soldPage(p);
     var html = '<div class="wrap"><nav class="crumb" aria-label="현재 위치"><a href="#list">홈</a><span>›</span><a href="#part-' + p.id + '">' + pname(p) + '</a><span>›</span><b>견적 문의</b></nav>' +
       '<div class="form-page"><form class="form-main" id="quoteForm" novalidate>' +
-        '<div><h1 style="margin:0;font-size:26px">견적 문의</h1><p style="margin:6px 0 0;color:var(--sub)">수량, 용도, 배송 지역을 남겨 주시면 판매자가 견적서를 보내 드립니다.</p></div>' +
+        '<div><h1 style="margin:0;font-size:26px">견적 문의</h1><p style="margin:6px 0 0;color:var(--sub)">수량, 용도, 배송 지역을 남겨 주시면 판매자가 견적서를 보내 드립니다.</p></div>' + guestNote() +
         '<section style="display:flex;flex-direction:column;gap:14px"><h2 class="h-sec">문의 정보</h2><div class="fgrid">' +
           fieldInput('qCompany', '회사명', '예: ○○농기계', true) + fieldInput('qName', '담당자명', '', true) +
           fieldInput('qPhone', '연락처', '010-0000-0000', true, 'tel') + fieldInput('qEmail', '이메일', 'name@company.com', false, 'email') +
@@ -732,15 +840,16 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     var p = byId[id]; var r = state.lastQuote || {};
     return shop('list', '<div class="wrap"><div class="done"><div class="mark">' + ICON_CHECK + '</div><h1>견적 요청이 접수되었습니다</h1><p style="margin:0;color:var(--sub)">판매자가 확인 후 영업일 기준 1일 안에 연락드립니다.</p>' +
       '<table class="tbl"><tbody><tr><th style="width:140px">접수번호</th><td class="num">' + esc(r.no) + '</td></tr><tr><th>부품</th><td>' + pname(p) + ' · ' + p.id + '</td></tr><tr><th>요청 수량</th><td>' + esc(r.qty) + '개</td></tr><tr><th>사용 용도</th><td>' + esc(r.use) + '</td></tr><tr><th>회신 연락처</th><td>' + esc(r.company) + ' ' + esc(r.name) + ' · ' + esc(r.phone) + '</td></tr></tbody></table>' +
-      '<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center"><a class="btn" href="#part-' + p.id + '">상품으로 돌아가기</a><a class="btn dark" href="#list">다른 부품 보기</a></div></div></div>');
+      '<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center"><a class="btn" href="#part-' + p.id + '">상품으로 돌아가기</a>' + (isBuyer() ? '<a class="btn" href="#my-quotes">견적 문의 내역</a>' : '') + '<a class="btn dark" href="#list">다른 부품 보기</a></div></div></div>');
   }
 
   /* ---------- order ---------- */
   function viewOrder(id) {
     var p = byId[id]; if (!p) return viewNotFound();
+    if (p.sold) return soldPage(p);
     var html = '<div class="wrap"><nav class="crumb" aria-label="현재 위치"><a href="#list">홈</a><span>›</span><a href="#part-' + p.id + '">' + pname(p) + '</a><span>›</span><b>주문서</b></nav>' +
       '<div class="form-page"><form class="form-main" id="orderForm" novalidate>' +
-        '<div style="display:flex;flex-direction:column;gap:6px"><h1 style="margin:0;font-size:26px">주문서 작성</h1><div class="stepper"><b>01 주문서</b><span>›</span><span>02 결제</span><span>›</span><span>03 주문 완료</span></div></div>' +
+        '<div style="display:flex;flex-direction:column;gap:6px"><h1 style="margin:0;font-size:26px">주문서 작성</h1><div class="stepper"><b>01 주문서</b><span>›</span><span>02 결제</span><span>›</span><span>03 주문 완료</span></div></div>' + guestNote() +
         '<section style="display:flex;flex-direction:column;gap:12px"><h2 class="h-sec">주문 상품</h2><div class="panel">' + partMini(p) + '</div>' +
           (p.grade !== 'A' ? '<div class="note" style="background:#FFF7ED">이 부품은 <b>' + p.grade + '등급(' + GRADE[p.grade].label + ')</b>입니다. 권장 용도: ' + p.use.join(', ') + '. 차량 재장착용으로는 권장하지 않습니다.</div>' : '') +
         '</section>' +
@@ -767,7 +876,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       '<table class="tbl"><tbody><tr><th style="width:140px">주문번호</th><td class="num">' + esc(o.no) + '</td></tr><tr><th>상품</th><td>' + pname(p) + ' · ' + p.id + ' (' + p.grade + '등급)</td></tr><tr><th>결제 금액</th><td class="num"><b>' + won(p.price) + '원</b></td></tr><tr><th>결제 수단</th><td>' + esc(o.pay) + '</td></tr><tr><th>배송</th><td>' + esc(o.ship) + '</td></tr>' +
       (o.payKey === 'bank' || o.payKey === 'tax' ? '<tr><th>입금 계좌</th><td>[은행명] [계좌번호] · 예금주 솔엔지니어링 · 3일 안에 입금</td></tr>' : '') +
       '</tbody></table><div class="note" style="text-align:left;width:100%">출고 전 봉인 라벨 사진을 한 번 더 보내 드립니다. 받으신 부품의 라벨 QR을 찍으면 이 성적서와 같은 부품인지 확인할 수 있습니다.</div>' +
-      '<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center"><a class="btn" href="#verify-' + p.id + '">라벨 QR 확인해 보기</a><a class="btn dark" href="#list">쇼핑 계속하기</a></div></div></div>');
+      '<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center"><a class="btn" href="#verify-' + p.id + '">라벨 QR 확인해 보기</a>' + (isBuyer() ? '<a class="btn" href="#my">주문 내역 보기</a>' : '') + '<a class="btn dark" href="#list">쇼핑 계속하기</a></div></div></div>');
   }
 
   /* ---------- verify ---------- */
@@ -807,10 +916,10 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     var th = 'style="width:15%"';
     var paper = '<div class="paper">' +
       '<div style="display:flex;justify-content:space-between;align-items:flex-start"><div style="width:150px;height:40px;border:1px dashed #999999;display:flex;align-items:center;justify-content:center;font-size:11px;color:#555555">[시험기관 로고]</div>' +
-        '<table class="t" style="font-size:11px"><tbody><tr><th>성적서번호</th><td>' + p.report + '</td></tr><tr><th>페이지</th><td>( 1 ) / ( 1 )</td></tr></tbody></table></div>' +
+        '<table class="t" style="font-size:11px"><tbody><tr><th>성적서번호</th><td>' + p.report + '</td></tr><tr><th>페이지</th><td>( 1 ) / ( 1 )</td></tr><tr><th>판 수</th><td>v' + p.ver + (p.ver > 1 ? ' (정정)' : '') + '</td></tr></tbody></table></div>' +
       '<div style="text-align:center;margin:22px 0 20px"><h1>시험성적서</h1><span style="font-size:12px;letter-spacing:.2em;color:#555555">TEST REPORT</span></div>' +
       '<table class="t" style="width:100%;border-top:2px solid #222222"><tbody>' +
-        '<tr><th rowspan="2" ' + th + '>1. 의 뢰 자</th><th style="width:12%">기 관 명</th><td>[재제조사명]</td><th style="width:12%">대 표 자</th><td style="width:18%">[대표자명]</td></tr>' +
+        '<tr><th rowspan="2" ' + th + '>1. 의 뢰 자</th><th style="width:12%">기 관 명</th><td>가나재제조</td><th style="width:12%">대 표 자</th><td style="width:18%">[대표자명]</td></tr>' +
         '<tr><th>주 소</th><td colspan="3">[의뢰자 주소]</td></tr>' +
         '<tr><th>2. 시 료 명</th><td colspan="4">사용후 전기차 ' + TYPES[p.type].full + ' / ' + p.maker + ' ' + p.car + ' ' + p.year + '년식 / 부품 고유번호 ' + p.id + '</td></tr>' +
         '<tr><th>3. 접수일자</th><td colspan="2">2026년 ' + p.d[1].replace('.', '월 ') + '일</td><th>시험일자</th><td>2026년 ' + p.d[2].replace('.', '월 ') + '일</td></tr>' +
@@ -826,7 +935,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
         '<a href="#verify-' + p.id + '" style="display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none" aria-label="이 성적서 진위확인">' + qr(Number(p.id.slice(-5))) + '<span style="font-size:10px;color:#555555">진위확인</span></a></div>' +
       '<div style="text-align:center;margin-top:22px;display:flex;flex-direction:column;gap:10px;align-items:center"><span style="font-size:13px;letter-spacing:.1em">2026 년 ' + p.d[3].replace('.', ' 월 ') + ' 일</span><div style="display:flex;align-items:center;gap:14px"><span style="font-family:var(--serif);font-size:20px;font-weight:700;letter-spacing:.15em">[시험기관명] 원장</span><div style="width:46px;height:46px;border:2px solid #B5473A;border-radius:50%;color:#B5473A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">직인</div></div></div>' +
       '<div style="margin-top:auto;border-top:1px solid #999999;padding-top:8px;font-size:10px;line-height:1.6;color:#555555"><div>1. 이 성적서는 의뢰자가 제출한 시료에 한한 결과이며, 같은 종류의 제품 전체 품질을 보증하지 않습니다.</div><div>2. 이 성적서는 사업계획용 시안이며, 기재된 기관·측정값·기준은 실제와 관계없는 예시입니다.</div></div></div>';
-    var back = state.from === 'lab' ? '<a class="btn sm" href="#lab">‹ 입력 화면으로</a>' : '<a class="btn sm" href="#part-' + p.id + '">‹ 상품으로 돌아가기</a>';
+    var back = state.from === 'lab' ? '<a class="btn sm" href="#lab-issued">‹ 업무시스템으로</a>' : '<a class="btn sm" href="#part-' + p.id + '">‹ 상품으로 돌아가기</a>';
     return '<div class="rstage"><div class="wrap"><div class="bar">' + back + '<a class="btn sm" href="#verify-' + p.id + '">진위확인</a></div><div class="rscroll">' + paper + '</div></div></div>';
   }
 
@@ -874,17 +983,17 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
 
   /* ---------- home ---------- */
   function viewHome() {
-    var recent = PARTS.slice().sort(function (a, b) { return b.d[3].localeCompare(a.d[3]); }).slice(0, 8);
+    var recent = live().sort(function (a, b) { return b.d[3].localeCompare(a.d[3]); }).slice(0, 8);
     var tileImg = { motor: 0, inverter: 6, reducer: 7, obc: 9 };
     var gdesc = { A: '전 항목 기준 이내', B: '부적합 없음, 주의 항목 있음', C: '부적합 항목 있음' };
-    var gc = { A: 0, B: 0, C: 0 }; PARTS.forEach(function (p) { gc[p.grade]++; });
+    var gc = { A: 0, B: 0, C: 0 }; live().forEach(function (p) { gc[p.grade]++; });
     var html = '<section class="hero"><div class="wrap"><h1>어떤 부품을 찾으세요?</h1>' +
       '<form id="heroForm" style="width:100%;display:flex;flex-direction:column;align-items:center;gap:10px">' +
         '<div class="hero-search"><label class="sr" for="hQ">검색어</label><input id="hQ" type="search" placeholder="부품명 또는 고유번호를 입력하세요"><button type="submit" aria-label="검색">' + ICON_SEARCH + '</button></div>' +
         '<div class="hero-form"><label class="sr" for="hType">부품 종류</label><select id="hType"><option value="">부품 종류</option>' + Object.keys(TYPES).map(function (k) { return '<option value="' + k + '">' + TYPES[k].name + '</option>'; }).join('') + '</select>' +
           '<label class="sr" for="hCar">차종</label><select id="hCar">' + carOptions('') + '</select><label class="sr" for="hYear">연식</label><select id="hYear">' + yearOptions('') + '</select></div></form>' +
       '<div class="hot"><span>많이 찾는 검색어</span>' + ['코나 일렉트릭', '니로 EV', 'EV6', '인버터', 'OBC'].map(function (q) { return '<button type="button" data-q="' + q + '">#' + q + '</button>'; }).join('') + '</div>' +
-      '<p class="total">등록 부품 <b class="num">' + PARTS.length + '</b>개</p></div></section><div class="wrap">' +
+      '<p class="total">등록 부품 <b class="num">' + live().length + '</b>개</p></div></section><div class="wrap">' +
       '<section class="sec"><div class="sec-h"><h2>부품 종류</h2><a href="#list" data-typeonly="">전체 보기 ›</a></div><div class="tiles">' + Object.keys(TYPES).map(function (k) {
         return '<a class="tile" href="#list" data-typeonly="' + k + '">' + photo(tileImg[k], 480, TYPES[k].name) + '<span>' + TYPES[k].name + '<small>' + typeCount(k) + '개</small></span></a>';
       }).join('') + '</div></section>' +
@@ -931,41 +1040,334 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     return shop('compare', html);
   }
 
-  /* ---------- back office ---------- */
-  var lab = { values: Object.assign({}, byId['EVM-2611-00417'].v), status: 'draft' };
-  function labRows() {
-    var ev = evaluate(lab.values);
-    return ev.rows.map(function (r, i) {
-      var cls = r.verdict === '주의' ? ' warn' : r.verdict === '부적합' ? ' bad' : '';
-      return '<tr><td style="text-align:center">' + (i + 1) + '</td><td>' + r.it.name + '</td><td style="text-align:center">' + r.it.unit + '</td><td style="color:#444444">' + crit(r.it) + '</td>' +
-        '<td style="text-align:center"><input type="text" inputmode="decimal" class="num' + cls + '" id="m-' + r.it.key + '" data-m="' + r.it.key + '" value="' + esc(lab.values[r.it.key]) + '" aria-label="' + r.it.name + ' 측정값" style="width:90px;text-align:right"' + (lab.status !== 'draft' ? ' disabled' : '') + '></td>' +
-        '<td style="text-align:center;font-weight:' + (r.verdict === '적합' ? '400' : '700') + ';color:' + vColor(r.verdict) + '" id="v-' + r.it.key + '">' + r.verdict + '</td></tr>';
+  /* ---------- login / join ---------- */
+  function isBuyer() { return !!state.user && state.user.role === 'buyer'; }
+  function util() {
+    var u = state.user;
+    if (!u) return '<a href="#login" data-next>로그인</a><a href="#join">회원가입</a><a href="#faq">고객센터</a>';
+    var home = { buyer: ['my', '마이페이지'], seller: ['seller', '판매자 센터'], lab: ['lab', '업무시스템'], tm: ['lab', '업무시스템'] }[u.role];
+    return '<span><b>' + esc(u.org) + ' ' + esc(u.name) + '</b>님 (' + u.label + ')</span><a href="#' + home[0] + '">' + home[1] + '</a><button type="button" class="linkbtn" data-logout>로그아웃</button><a href="#faq">고객센터</a>';
+  }
+  function login(acc) {
+    state.user = acc; saveUser(acc.key || null);
+    toast(acc.org + ' ' + acc.name + '님, 로그인했습니다.');
+    if (location.hash === '#login') { var nx = state.next; state.next = ''; location.hash = nx && nx !== 'login' ? nx : ROLE_HOME[acc.role]; }
+    else rerender();
+  }
+  function logout() {
+    state.user = null; saveUser(null); toast('로그아웃했습니다.');
+    if (/^#(my|seller|lab)(-|$)/.test(location.hash)) location.hash = 'home'; else rerender();
+  }
+  function toggleWish(id) {
+    if (!state.user) { state.next = location.hash.slice(1); toast('찜하기는 로그인 후 이용할 수 있습니다.'); location.hash = 'login'; return; }
+    if (state.user.role !== 'buyer') { toast('찜하기는 구매자 계정에서 이용할 수 있습니다.'); return; }
+    var i = state.wish.indexOf(id);
+    if (i >= 0) { state.wish.splice(i, 1); toast('찜 목록에서 뺐습니다.'); } else { state.wish.push(id); toast('찜 목록에 담았습니다.'); }
+    rerender();
+  }
+  function wishBtn(id, big) {
+    var on = state.wish.indexOf(id) >= 0 && isBuyer();
+    return '<button type="button" class="' + (big ? 'btn sm ' : '') + 'wishbtn' + (on ? ' on' : '') + '" data-wish="' + id + '" aria-pressed="' + on + '"><svg width="16" height="16" viewBox="0 0 24 24" fill="' + (on ? 'currentColor' : 'none') + '" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.3a4.2 4.2 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z"></path></svg>' + (on ? '찜함' : '찜하기') + '</button>';
+  }
+  function guestNote() {
+    return state.user ? '' : '<div class="note" style="padding:12px 14px">비회원으로도 진행할 수 있습니다. <a href="#login" data-next><b>로그인</b></a>하면 마이페이지에서 진행 상황을 확인할 수 있습니다.</div>';
+  }
+  function soldPage(p) {
+    return shop('list', '<div class="wrap"><div class="done"><h1>판매가 완료된 부품입니다</h1><p style="margin:0;color:var(--sub)">' + pname(p) + ' · ' + p.id + '</p><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center"><a class="btn" href="#part-' + p.id + '">상품 정보 보기</a><a class="btn dark" href="#list">다른 부품 찾기</a></div></div></div>');
+  }
+  function prefill() {
+    var u = state.user; if (!u) return;
+    var map = { qCompany: u.org, qName: u.name, qPhone: u.phone, oCompany: u.org === '개인' ? u.name : u.org + ' ' + u.name, oPhone: u.phone, sCompany: u.org, sName: u.name, sPhone: u.phone };
+    Object.keys(map).forEach(function (k) { var el = document.getElementById(k); if (el && !el.value && map[k]) el.value = map[k]; });
+  }
+  function demoAccounts(keys, title) {
+    return '<div class="demo-acc"><b>' + (title || '예시 계정으로 로그인') + '</b><div class="acc-list">' + keys.map(function (k) {
+      var a = ACCOUNTS[k];
+      return '<button type="button" class="acc" data-login="' + k + '"><span class="acc-role">' + a.label + '</span><b>' + a.org + '</b><small>' + a.name + ' · 아이디 ' + a.id + '</small></button>';
+    }).join('') + '</div><p>시안이라 버튼을 누르면 해당 역할로 바로 들어갑니다.</p></div>';
+  }
+  function gate(roles, msg) {
+    if (state.user && roles.indexOf(state.user.role) >= 0) return null;
+    var now = state.user ? ' 지금은 ' + esc(state.user.org) + ' ' + esc(state.user.name) + '(' + state.user.label + ') 계정으로 로그인되어 있습니다.' : '';
+    return shop('', '<div class="wrap"><div class="gatebox"><h1>' + (state.user ? '접근 권한이 없습니다' : '로그인이 필요합니다') + '</h1><p>' + msg + now + '</p>' + demoAccounts(roles, '예시 계정으로 들어가기') +
+      '<div class="auth-links"><a href="#login">아이디로 로그인</a><a href="#join">회원가입</a></div></div></div>');
+  }
+  function viewLogin() {
+    if (state.user) {
+      var u = state.user;
+      return shop('', '<div class="wrap"><div class="gatebox"><h1>이미 로그인되어 있습니다</h1><p>' + esc(u.org) + ' ' + esc(u.name) + '(' + u.label + ') 계정입니다.</p><div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn dark" href="#' + ROLE_HOME[u.role] + '">' + { buyer: '마이페이지', seller: '판매자 센터', lab: '업무시스템', tm: '업무시스템' }[u.role] + '로 가기</a><button class="btn" type="button" data-logout>로그아웃</button></div></div></div>');
+    }
+    var html = '<div class="wrap"><div class="auth">' +
+      '<form class="auth-form" id="loginForm" novalidate><h1>로그인</h1>' +
+        '<div class="field"><label for="loginId">아이디</label><input id="loginId" autocomplete="username" placeholder="아이디"><span class="err" id="loginIdErr" hidden>아이디를 입력해 주세요.</span></div>' +
+        '<div class="field"><label for="loginPw">비밀번호</label><input id="loginPw" type="password" autocomplete="current-password" placeholder="비밀번호"><span class="err" id="loginPwErr" hidden>비밀번호를 입력해 주세요.</span></div>' +
+        '<label style="display:flex;gap:8px;align-items:center;font-size:13px"><input type="checkbox" id="saveId" style="width:16px;height:16px;accent-color:var(--ink)"> 아이디 저장</label>' +
+        '<button class="btn dark" type="submit" style="height:52px">로그인</button>' +
+        '<div class="auth-links"><a href="#join">회원가입</a><a href="#" data-toast="아이디 찾기는 준비 중입니다.">아이디 찾기</a><a href="#" data-toast="비밀번호 찾기는 준비 중입니다.">비밀번호 찾기</a></div>' +
+        '<p style="margin:0;font-size:12px;color:var(--sub)">시안이라 비밀번호를 확인하거나 저장하지 않습니다. 아이디에 buyer, seller, lab, tm을 넣으면 해당 역할로, 그 밖의 아이디는 구매자로 들어갑니다.</p>' +
+      '</form>' + demoAccounts(['buyer', 'seller', 'lab', 'tm']) + '</div></div>';
+    return shop('', html);
+  }
+  function viewJoin() {
+    var d = state.joinDone;
+    if (d) {
+      if (d.type === 'personal' || d.type === 'company') {
+        return shop('', '<div class="wrap"><div class="done"><div class="mark">' + ICON_CHECK + '</div><h1>가입이 완료되었습니다</h1><p style="margin:0;color:var(--sub)">' + esc(d.org === '개인' ? d.name : d.org + ' ' + d.name) + '님, 환영합니다. 바로 로그인된 상태입니다.</p><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center"><a class="btn" href="#my">마이페이지</a><a class="btn dark" href="#list">부품 찾기</a></div></div></div>');
+      }
+      var key = d.type === 'seller' ? 'seller' : 'lab';
+      return shop('', '<div class="wrap"><div class="gatebox"><div class="mark" style="width:56px;height:56px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center">' + ICON_CHECK + '</div><h1>가입 신청이 접수되었습니다</h1><p>' + esc(d.org) + ' ' + esc(d.name) + '님, ' + (key === 'seller' ? '판매자' : '시험기관') + ' 회원은 사업자 정보를 확인한 뒤 영업일 1일 안에 승인 안내를 드립니다.</p>' + demoAccounts(key === 'seller' ? ['seller'] : ['lab', 'tm'], '승인 전에는 예시 계정으로 둘러볼 수 있습니다') + '</div></div>');
+    }
+    var types = [['personal', '개인 구매자', '정비, 개인 수리용'], ['company', '기업 구매자', '농기계·운반차 제조, 정비업체'], ['seller', '판매자', '재제조사, 폐차장 등 부품 공급'], ['lab', '시험기관', '성능 시험과 성적서 발행']];
+    var html = '<div class="wrap"><div class="form-page" style="justify-content:center"><form class="form-main" id="joinForm" novalidate style="max-width:720px">' +
+      '<div><h1 style="margin:0;font-size:26px">회원가입</h1><p style="margin:6px 0 0;color:var(--sub)">회원 유형에 따라 이용할 수 있는 화면이 다릅니다.</p></div>' +
+      '<section style="display:flex;flex-direction:column;gap:12px"><h2 class="h-sec">회원 유형</h2><div class="radio-cards" role="radiogroup" aria-label="회원 유형">' +
+        types.map(function (t, i) { return '<label for="jt' + i + '"><input type="radio" name="jType" id="jt' + i + '" value="' + t[0] + '"' + (i === 1 ? ' checked' : '') + '><span><b>' + t[1] + '</b><small>' + t[2] + '</small></span></label>'; }).join('') +
+      '</div><p style="margin:0;font-size:13px;color:var(--sub)">판매자와 시험기관은 사업자 확인 후 승인됩니다.</p></section>' +
+      '<section style="display:flex;flex-direction:column;gap:14px"><h2 class="h-sec">기본 정보</h2>' +
+        '<div class="fgrid" id="orgBox">' + fieldInput('jOrg', '회사·기관명', '', true) + fieldInput('jBiz', '사업자등록번호', '000-00-00000', true) + '</div>' +
+        '<div class="fgrid">' + fieldInput('jName', '이름(담당자명)', '', true) + fieldInput('jPhone', '연락처', '010-0000-0000', true, 'tel') +
+        fieldInput('jId', '아이디', '영문, 숫자 4~16자', true) +
+        '<div class="field"><label for="jPw">비밀번호 <span class="req">*</span></label><input id="jPw" type="password" autocomplete="new-password" placeholder="8자 이상"><span class="err" id="jPwErr" hidden>비밀번호를 입력해 주세요.</span></div>' +
+        fieldInput('jEmail', '이메일', 'name@company.com', false, 'email') + '</div></section>' +
+      '<section style="display:flex;flex-direction:column;gap:8px"><h2 class="h-sec">약관 동의</h2>' +
+        '<label style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="jAgree1" style="width:18px;height:18px;accent-color:var(--ink)"> [필수] 이용약관 동의</label>' +
+        '<label style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="jAgree2" style="width:18px;height:18px;accent-color:var(--ink)"> [필수] 개인정보 수집·이용 동의</label>' +
+        '<label style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="jAgree3" style="width:18px;height:18px;accent-color:var(--ink)"> [선택] 신규 부품 등록 알림 수신</label>' +
+        '<span class="err" id="jAgreeErr" style="color:var(--bad);font-size:12px" hidden>필수 약관에 동의해 주세요.</span></section>' +
+      '<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn" href="#login">취소</a><button class="btn dark" type="submit" style="min-width:200px">가입하기</button></div>' +
+      '<p style="margin:0;font-size:12px;color:var(--sub)">시안이라 입력한 정보는 저장되지 않습니다.</p></form></div></div>';
+    return shop('', html);
+  }
+
+  /* ---------- account layout ---------- */
+  function acct(title, nav, active, body) {
+    return '<div class="wrap acct"><nav class="acct-nav" aria-label="' + title + ' 메뉴"><b>' + title + '</b>' + nav.map(function (n) {
+      return '<a href="#' + n[0] + '"' + (n[0] === active ? ' class="on" aria-current="page"' : '') + '><span>' + n[1] + '</span>' + (n[2] != null ? '<span class="cnt">' + n[2] + '</span>' : '') + '</a>';
+    }).join('') + '</nav><div class="acct-main">' + body + '</div></div>';
+  }
+  function stat(label, v) { return '<div class="stat"><small>' + label + '</small><b class="num">' + v + '</b></div>'; }
+  function pill(text, cls) { return '<span class="pill ' + (cls || '') + '">' + text + '</span>'; }
+  function plink(id) { var p = byId[id]; return p ? '<a href="#part-' + id + '" style="font-weight:700;color:var(--ink)">' + pname(p) + '</a><br><span style="font-size:12px;color:var(--sub)">' + id + ' · ' + p.grade + '등급</span>' : id; }
+
+  /* ---------- my page (buyer) ---------- */
+  function viewMy(sub) {
+    var g = gate(['buyer'], '마이페이지는 구매자 계정으로 이용할 수 있습니다.'); if (g) return g;
+    var u = state.user;
+    var os = ORDERS.filter(function (o) { return o.buyer === u.id; }), qs = QUOTES.filter(function (q) { return q.buyer === u.id; });
+    var nav = [['my', '주문 내역', os.length], ['my-quotes', '견적 문의', qs.length], ['my-wish', '찜한 부품', state.wish.length], ['my-reports', '성적서 보관함', os.length], ['my-car', '내 차량'], ['my-info', '회원 정보']];
+    var active = 'my' + (sub ? '-' + sub : '');
+    var head = '<div class="acct-head"><div><span>' + esc(u.org) + '</span><h1>' + esc(u.name) + '님</h1></div><div class="stat-row">' +
+      stat('진행 중 주문', os.filter(function (o) { return o.st !== '구매확정'; }).length) + stat('회신 대기 견적', qs.filter(function (q) { return q.st === '접수'; }).length) + stat('찜한 부품', state.wish.length) + '</div></div>';
+    var body;
+    if (sub === 'quotes') {
+      body = '<h2 class="h-sec">견적 문의</h2>' + (qs.length ? qs.map(function (q) {
+        var p = byId[q.id];
+        return '<div class="qcard"><div class="top"><div>' + plink(q.id) + '</div><div>' + (q.st === '회신 완료' ? pill('회신 완료', 'green') : pill('판매자 확인 중')) + '</div></div>' +
+          '<div style="font-size:13px;color:var(--sub)">' + q.no + ' · ' + q.date + ' · 수량 ' + q.qty + '개 · ' + q.use + '</div>' +
+          (q.reply ? '<div class="ans"><b>판매자 회신</b> · ' + esc(q.reply) + '</div>' + (p && !p.sold ? '<div><a class="btn sm dark" href="#order-' + q.id + '">이 조건으로 주문</a></div>' : '') : '') + '</div>';
+      }).join('') : '<div class="empty">견적 문의 내역이 없습니다.</div>');
+    } else if (sub === 'wish') {
+      var ws = state.wish.map(function (id) { return byId[id]; }).filter(Boolean);
+      body = '<h2 class="h-sec">찜한 부품</h2>' + (ws.length ? '<div class="grid">' + ws.map(function (p) { return p.sold ? '<div class="card"><div class="empty" style="padding:30px 12px">' + pname(p) + '<br>판매 완료</div>' + wishBtn(p.id) + '</div>' : card(p); }).join('') + '</div>' : '<div class="empty">찜한 부품이 없습니다. 부품 목록에서 “찜하기”를 눌러 보세요.</div>');
+    } else if (sub === 'reports') {
+      body = '<h2 class="h-sec">성적서 보관함</h2><p style="margin:-8px 0 0;color:var(--sub);font-size:14px">구매한 부품의 시험성적서를 모아 둡니다. 보증·반품 때 필요합니다.</p>' + (os.length ? '<div class="tbl-scroll"><table class="tbl" style="min-width:600px"><thead><tr><th>부품</th><th>성적서 번호</th><th>시험일</th><th>판 수</th><th></th></tr></thead><tbody>' + os.map(function (o) {
+        var p = byId[o.id];
+        return '<tr><td>' + plink(o.id) + '</td><td class="num">' + p.report + '</td><td>' + p.testDate + '</td><td>v' + p.ver + '</td><td><div style="display:flex;gap:6px;flex-wrap:wrap"><a class="btn sm" href="#report-' + p.id + '">성적서</a><a class="btn sm" href="#verify-' + p.id + '">진위확인</a></div></td></tr>';
+      }).join('') + '</tbody></table></div>' : '<div class="empty">구매한 부품이 없습니다.</div>');
+    } else if (sub === 'car') {
+      var c = state.myCar;
+      body = '<h2 class="h-sec">내 차량</h2>' + (c ? '<div class="note">등록된 차량: <b>' + c.maker + ' ' + c.car + (c.year ? ' ' + c.year + '년식' : '') + '</b> · 부품 목록과 상세 화면에 호환 여부가 표시됩니다.</div>' : '<div class="note">등록된 차량이 없습니다. 차량을 등록하면 맞는 부품을 바로 확인할 수 있습니다.</div>') +
+        '<form id="myCarForm" class="panel" style="display:flex;flex-wrap:wrap;gap:8px;align-items:flex-end"><div class="field" style="flex:1 1 200px"><label for="mCar">차종</label><select id="mCar">' + carOptions(c ? c.maker + '|' + c.car : '') + '</select></div><div class="field" style="flex:1 1 140px"><label for="mYear">연식</label><select id="mYear">' + yearOptions(c ? c.year : '') + '</select></div><button class="btn dark" type="submit">저장</button></form>';
+    } else if (sub === 'info') {
+      body = '<h2 class="h-sec">회원 정보</h2><table class="tbl"><tbody><tr><th style="width:160px">회원 유형</th><td>' + u.label + (u.org !== '개인' ? ' (기업)' : '') + '</td></tr><tr><th>회사명</th><td>' + esc(u.org) + '</td></tr><tr><th>이름</th><td>' + esc(u.name) + '</td></tr><tr><th>아이디</th><td>' + esc(u.id) + '</td></tr><tr><th>연락처</th><td>' + esc(u.phone || '-') + '</td></tr></tbody></table>' +
+        '<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn sm" type="button" data-toast="회원 정보 수정은 준비 중입니다.">정보 수정</button><button class="btn sm" type="button" data-toast="비밀번호 변경은 준비 중입니다.">비밀번호 변경</button><button class="btn sm" type="button" data-toast="회원 탈퇴는 고객센터로 문의해 주세요.">회원 탈퇴</button></div>';
+    } else {
+      body = '<h2 class="h-sec">주문 내역</h2>' + (os.length ? '<div class="tbl-scroll"><table class="tbl" style="min-width:680px"><thead><tr><th style="width:130px">주문일</th><th>부품</th><th style="text-align:right">결제 금액</th><th style="width:110px">상태</th><th style="width:190px"></th></tr></thead><tbody>' + os.map(function (o) {
+        var act = o.st === '배송 완료' ? '<div style="display:flex;gap:6px;flex-wrap:wrap"><a class="btn sm" href="#verify-' + o.id + '">라벨 QR 확인</a><button class="btn sm dark" type="button" data-confirm="' + o.no + '">구매확정</button></div>'
+          : o.st === '구매확정' ? '<a class="btn sm" href="#report-' + o.id + '">성적서</a>'
+          : '<button class="btn sm" type="button" data-advance="' + o.no + '">다음 단계로 (시연)</button>';
+        return '<tr><td>' + o.date + '<br><span style="font-size:12px;color:var(--sub)">' + o.no + '</span></td><td>' + plink(o.id) + '</td><td class="num" style="text-align:right;font-weight:700">' + won(o.price) + '원<br><span style="font-size:12px;font-weight:400;color:var(--sub)">' + o.pay + '</span></td><td>' + pill(o.st, OPILL[o.st]) + '</td><td>' + act + '</td></tr>';
+      }).join('') + '</tbody></table></div><p style="margin:0;font-size:13px;color:var(--sub)">부품을 받으면 라벨 QR로 성적서와 같은 부품인지 확인한 뒤 구매확정을 눌러 주세요. 구매확정 후 판매자에게 정산됩니다.</p>' : '<div class="empty">주문 내역이 없습니다. <a href="#list">부품 찾기</a></div>');
+    }
+    return shop('', acct('마이페이지', nav, active, head + body));
+  }
+
+  /* ---------- seller center ---------- */
+  var SST = { received: ['입고 · 시험 대기', ''], testing: ['시험 중', 'blue'], review: ['검토 중', 'orange'], selling: ['판매 중', 'green'], sold: ['판매 완료', 'dark'] };
+  function sellerRows() {
+    return RECEIPTS.filter(function (r) { return r.st !== 'issued'; }).map(function (r) { return { st: r.st, id: r.pid, name: TYPES[r.type].name + ' · ' + r.maker + ' ' + r.car + ' ' + r.year, grade: '', price: r.price, date: r.date.replace(/-/g, '.') }; })
+      .concat(PARTS.map(function (p) { return { st: p.sold ? 'sold' : 'selling', id: p.id, name: pname(p) + ' · ' + p.maker + ' ' + p.year, grade: p.grade, price: p.price, date: '2026.' + p.d[3], part: true }; }));
+  }
+  function settleRows() {
+    return ORDERS.map(function (o) { var p = byId[o.id]; return { no: o.no, part: pname(p) + ' · ' + o.id, date: o.date, price: o.price, st: o.st === '구매확정' ? '정산 예정' : '구매확정 대기' }; }).concat(SETTLE);
+  }
+  function viewSeller(sub) {
+    var g = gate(['seller'], '판매자 센터는 판매자 계정으로 이용할 수 있습니다.'); if (g) return g;
+    var u = state.user, rows = sellerRows(), wait = QUOTES.filter(function (q) { return q.st === '접수'; }).length;
+    var due = settleRows().filter(function (r) { return r.st === '정산 예정'; }).reduce(function (a, r) { return a + r.price - Math.round(r.price * 0.05); }, 0);
+    var nav = [['seller', '부품 현황', rows.length], ['seller-quotes', '견적 문의', wait ? wait + '건 대기' : null], ['seller-settle', '정산 내역'], ['sell', '시험·판매 신청']];
+    var head = '<div class="acct-head"><div><span>판매자</span><h1>' + esc(u.org) + '</h1></div><div class="stat-row">' + stat('판매 중', rows.filter(function (r) { return r.st === 'selling'; }).length) + stat('회신 대기 견적', wait) + stat('정산 예정액', won(due) + '원') + '</div></div>';
+    var body;
+    if (sub === 'quotes') {
+      body = '<h2 class="h-sec">견적 문의</h2>' + QUOTES.map(function (q) {
+        return '<div class="qcard"><div class="top"><div>' + plink(q.id) + '</div><div>' + (q.st === '회신 완료' ? pill('회신 완료', 'green') : pill('회신 대기', 'orange')) + '</div></div>' +
+          '<div style="font-size:13px;color:var(--sub)">' + q.no + ' · ' + q.date + ' · <b style="color:var(--ink)">' + esc(q.company) + ' ' + esc(q.name) + '</b> · 수량 ' + q.qty + '개 · ' + q.use + '</div>' +
+          (q.st === '회신 완료' ? '<div class="ans"><b>보낸 회신</b> · ' + esc(q.reply) + '</div>' :
+            '<form class="reply" data-reply="' + q.no + '" novalidate><label class="sr" for="rp-' + q.no + '">개당 견적가</label><input type="number" id="rp-' + q.no + '" placeholder="개당 견적가 (원)" style="flex:0 1 170px"><label class="sr" for="rm-' + q.no + '">메시지</label><input type="text" id="rm-' + q.no + '" placeholder="출고일, 배송 조건 등" style="flex:1 1 240px"><button class="btn sm dark" type="submit">회신 보내기</button></form>') + '</div>';
+      }).join('');
+    } else if (sub === 'settle') {
+      var sr = settleRows();
+      var sum = function (st) { return sr.filter(function (r) { return r.st === st; }).reduce(function (a, r) { return a + r.price - Math.round(r.price * 0.05); }, 0); };
+      body = '<h2 class="h-sec">정산 내역</h2><div class="stat-row">' + stat('정산 완료', won(sum('정산 완료')) + '원') + stat('정산 예정', won(sum('정산 예정')) + '원') + stat('구매확정 대기', won(sum('구매확정 대기')) + '원') + '</div>' +
+        '<div class="tbl-scroll"><table class="tbl" style="min-width:700px"><thead><tr><th>주문</th><th>부품</th><th style="text-align:right">판매가</th><th style="text-align:right">수수료 (5%)</th><th style="text-align:right">정산액</th><th>상태</th></tr></thead><tbody>' + sr.map(function (r) {
+          var fee = Math.round(r.price * 0.05);
+          return '<tr><td>' + r.date + '<br><span style="font-size:12px;color:var(--sub)">' + r.no + '</span></td><td>' + r.part + '</td><td class="num" style="text-align:right">' + won(r.price) + '</td><td class="num" style="text-align:right">−' + won(fee) + '</td><td class="num" style="text-align:right;font-weight:700">' + won(r.price - fee) + '</td><td>' + pill(r.st, r.st === '정산 완료' ? 'green' : r.st === '정산 예정' ? 'blue' : '') + '</td></tr>';
+        }).join('') + '</tbody></table></div><p style="margin:0;font-size:13px;color:var(--sub)">구매자가 구매확정하면 다음 정산일에 지급됩니다. 수수료율과 정산 주기는 예시입니다.</p>';
+    } else {
+      var st = state.sstage, shown = rows.filter(function (r) { return !st || r.st === st; });
+      body = '<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px"><h2 class="h-sec">부품 현황</h2><a class="btn sm dark" href="#sell">시험·판매 신청</a></div>' +
+        '<div class="stages"><button type="button" data-stage=""' + (!st ? ' class="on"' : '') + '><small>전체</small><b class="num">' + rows.length + '</b></button>' + Object.keys(SST).map(function (k) { return '<button type="button" data-stage="' + k + '"' + (st === k ? ' class="on"' : '') + '><small>' + SST[k][0] + '</small><b class="num">' + rows.filter(function (r) { return r.st === k; }).length + '</b></button>'; }).join('') + '</div>' +
+        '<div class="tbl-scroll"><table class="tbl" style="min-width:680px"><thead><tr><th>고유번호</th><th>부품</th><th>진행 단계</th><th>등급</th><th style="text-align:right">판매가</th><th></th></tr></thead><tbody>' + shown.map(function (r) {
+          return '<tr><td class="num">' + r.id + '<br><span style="font-size:12px;color:var(--sub)">' + r.date + '</span></td><td>' + r.name + '</td><td>' + pill(SST[r.st][0], SST[r.st][1]) + '</td><td>' + (r.grade ? gBadge(r.grade, false) : '<span style="color:var(--sub)">시험 후 확정</span>') + '</td><td class="num" style="text-align:right">' + won(r.price) + '원</td><td>' + (r.part ? '<div style="display:flex;gap:6px;flex-wrap:wrap"><a class="btn sm" href="#part-' + r.id + '">상품</a><a class="btn sm" href="#report-' + r.id + '">성적서</a></div>' : '') + '</td></tr>';
+        }).join('') + '</tbody></table></div>';
+    }
+    return shop('', acct('판매자 센터', nav, 'seller' + (sub ? '-' + sub : ''), head + body));
+  }
+
+  /* ---------- lab system ---------- */
+  var RST = { received: ['입고 · 시험 대기', ''], testing: ['시험 중', 'blue'], review: ['검토 대기', 'orange'], issued: ['발행 완료', 'green'] };
+  function rpill(st) { return pill(RST[st][0], RST[st][1]); }
+  function rname(r) { return TYPES[r.type].full + ' · ' + r.maker + ' ' + r.car + ' ' + r.year; }
+  function boLayout(active, title, crumb, body) {
+    var u = state.user, wait = RECEIPTS.filter(function (r) { return r.st === 'review'; }).length;
+    var nav = [['시험관리'], ['lab', '시험 접수 현황'], ['lab-input', '시험결과 입력'], ['lab-approve', '결재 대기' + (wait ? ' (' + wait + ')' : '')], ['성적서관리'], ['lab-issued', '발행 내역'], ['lab-fix', '정정·재발행'], ['기준정보'], ['standard', '시험항목·기준'], ['lab-equip', '장비·교정 정보']];
+    return '<div class="bo"><header class="bo-top"><div class="in"><b>EV부품이력 <span>| 시험기관 업무시스템</span></b><div style="display:flex;gap:14px;align-items:center;font-size:13px;flex-wrap:wrap"><span style="color:#FFFFFF">' + esc(u.org) + ' ' + esc(u.name) + ' ' + u.label + '</span><a href="#home">구매자 사이트</a><button type="button" class="bo-out" data-logout>로그아웃</button></div></div></header>' +
+      '<div class="bo-body"><nav class="bo-nav" aria-label="업무 메뉴">' + nav.map(function (n) { return n.length === 1 ? '<div class="g">' + n[0] + '</div>' : '<a href="#' + n[0] + '"' + (n[0] === active ? ' class="on" aria-current="page"' : '') + '>' + n[1] + '</a>'; }).join('') + '</nav>' +
+      '<main class="bo-main"><div class="bo-title"><h1>' + title + '</h1><span>' + crumb + '</span></div>' + body + '</main></div></div>';
+  }
+  function viewLabSys(sub, arg) {
+    var g = gate(['lab', 'tm'], '시험기관 업무시스템은 시험기관 계정으로 이용할 수 있습니다.'); if (g) return g;
+    if (sub === 'input') return labInput(arg);
+    if (sub === 'approve') return labApprove();
+    if (sub === 'issued') return labIssued();
+    if (sub === 'fix') return labFix(arg);
+    if (sub === 'equip') return labEquip();
+    return labReceipts();
+  }
+  function labReceipts() {
+    var open = RECEIPTS.filter(function (r) { return r.st !== 'issued'; });
+    var issued = PARTS.slice().sort(function (a, b) { return b.d[3].localeCompare(a.d[3]); });
+    var cnt = function (st) { return RECEIPTS.filter(function (r) { return r.st === st; }).length; };
+    var act = function (r) {
+      if (r.st === 'received') return '<button type="button" class="bo-btn sm" data-start="' + r.no + '">시험 시작</button>';
+      if (r.st === 'testing') return '<a class="bo-link" href="#lab-input-' + r.no + '">결과 입력</a>';
+      return '<a class="bo-link" href="#lab-approve">결재 대기함</a>';
+    };
+    var rows = open.map(function (r) { return '<tr><td>' + r.no + '</td><td>' + r.pid + '</td><td>' + rname(r) + '</td><td>가나재제조</td><td>' + r.date + '</td><td>' + rpill(r.st) + '</td><td>' + act(r) + '</td></tr>'; }).join('') +
+      issued.map(function (p) { return '<tr><td>' + (p.rc || 'RC-2026-' + p.d[1].replace('.', '') + '-' + p.id.slice(-4)) + '</td><td>' + p.id + '</td><td>' + TYPES[p.type].full + ' · ' + p.maker + ' ' + p.car + ' ' + p.year + '</td><td>가나재제조</td><td>2026-' + p.d[1].replace('.', '-') + '</td><td>' + rpill('issued') + '</td><td><a class="bo-link" href="#report-' + p.id + '" data-from="lab">성적서</a></td></tr>'; }).join('');
+    var body = '<div class="bo-stats"><div><small>입고 · 시험 대기</small><b class="num">' + cnt('received') + '</b></div><div><small>시험 중</small><b class="num">' + cnt('testing') + '</b></div><div><small>검토 대기</small><b class="num">' + cnt('review') + '</b></div><div><small>발행 완료</small><b class="num">' + PARTS.length + '</b></div></div>' +
+      '<section><h2>■ 접수 목록</h2><div class="tbl-scroll"><table class="bo-tbl" style="min-width:860px;font-size:13px"><thead><tr><th>접수번호</th><th>부품 고유번호</th><th>시료</th><th>의뢰자</th><th>접수일</th><th>상태</th><th>작업</th></tr></thead><tbody>' + rows + '</tbody></table></div></section>';
+    return boLayout('lab', '시험 접수 현황', '시험관리 &gt; 시험 접수 현황', body);
+  }
+  function condHtml(r, lock) {
+    var dis = lock ? ' disabled' : '';
+    var inp = function (id, v, label, unit) { return '<th>' + label + '</th><td><input type="text" id="' + id + '" value="' + v + '" aria-label="' + label + '" style="width:64px;text-align:right"' + dis + '> ' + unit + '</td>'; };
+    var eq = { motor: ['다이나모 2호기', '다이나모 1호기'], inverter: ['인버터 부하시험대', '전력분석기 1호기'], reducer: ['감속기 시험대', '다이나모 1호기'], obc: ['충전기 시험대', '전력분석기 1호기'] }[r.type];
+    var sel = '<th>사용 장비</th><td><select id="c6" aria-label="사용 장비"' + dis + '>' + eq.map(function (e) { return '<option>' + e + '</option>'; }).join('') + '</select></td>';
+    if (r.type === 'motor') return '<tr>' + inp('c1', '23', '주위온도', '℃') + inp('c2', '45', '상대습도', '%RH') + inp('c3', '350', '입력전압', 'V DC') + '</tr><tr>' + inp('c4', '3000', '회전속도', 'rpm') + inp('c5', '50', '부하율', '%') + sel + '</tr>';
+    return '<tr>' + inp('c1', '23', '주위온도', '℃') + inp('c2', '45', '상대습도', '%RH') + sel + '</tr>';
+  }
+  function labRowsR(r, lock) {
+    return evaluate(r.v, TYPES[r.type].items).rows.map(function (rw, i) {
+      var cls = rw.verdict === '주의' ? ' warn' : rw.verdict === '부적합' ? ' bad' : '';
+      var val = r.v[rw.it.key]; if (val == null) val = '';
+      return '<tr><td style="text-align:center">' + (i + 1) + '</td><td>' + rw.it.name + '</td><td style="text-align:center">' + rw.it.unit + '</td><td style="color:#444444">' + crit(rw.it) + '</td>' +
+        '<td style="text-align:center"><input type="text" inputmode="decimal" class="num' + cls + '" id="m-' + rw.it.key + '" data-m="' + rw.it.key + '" data-r="' + r.no + '" value="' + esc(val) + '" aria-label="' + rw.it.name + ' 측정값" style="width:90px;text-align:right"' + (lock ? ' disabled' : '') + '></td>' +
+        '<td style="text-align:center;font-weight:' + (rw.verdict === '적합' ? '400' : '700') + ';color:' + vColor(rw.verdict) + '" id="v-' + rw.it.key + '">' + rw.verdict + '</td></tr>';
     }).join('');
   }
-  function labSummary() {
-    var ev = evaluate(lab.values);
+  function labSumR(r) {
+    var ev = evaluate(r.v, TYPES[r.type].items);
     if (ev.count['미입력']) return '<b>판정 대기</b> · 미입력 ' + ev.count['미입력'] + '개 항목';
     return '<b>' + ev.grade + '등급 (' + GRADE[ev.grade].label + ')</b> &nbsp;·&nbsp; 적합 ' + ev.count['적합'] + ' / 주의 ' + ev.count['주의'] + ' / 부적합 ' + ev.count['부적합'] + ' &nbsp;·&nbsp; 권장 용도: ' + GRADE[ev.grade].use.join(', ');
   }
-  function viewLab() {
-    var st = { draft: ['작성 중', '대기', '승인 후'], review: ['요청 완료', '검토 중', '승인 후'], done: ['완료', '승인', '발행 완료'] }[lab.status];
-    var T = 'class="bo-tbl"';
-    return '<div class="bo"><header class="bo-top"><div class="in"><b>EV부품이력 <span>| 시험기관 업무시스템</span></b><div style="display:flex;gap:14px;align-items:center;font-size:13px"><span style="color:#FFFFFF">경북테크노파크 김OO 시험원</span><a href="#list">구매자 사이트</a></div></div></header>' +
-      '<div class="bo-body"><nav class="bo-nav" aria-label="업무 메뉴"><div class="g">시험관리</div><a href="#" data-toast="접수 현황: 오늘 입고 3건 (예시)">시험 접수 현황</a><a href="#lab" class="on" aria-current="page">시험결과 입력</a><a href="#" data-toast="결재 대기 문서가 없습니다.">결재 대기</a>' +
-        '<div class="g">성적서관리</div><a href="#report-EVM-2611-00417" data-from="lab">발행 내역</a><a href="#" data-toast="정정·재발행 시 이전 버전이 함께 보관됩니다.">정정·재발행</a><div class="g">기준정보</div><a href="#standard">시험항목·기준</a><a href="#" data-toast="장비 교정 유효기간: 2027.03.31 (예시)">장비·교정 정보</a></nav>' +
-      '<main class="bo-main"><div class="bo-title"><h1>시험결과 입력</h1><span>시험관리 &gt; 시험결과 입력</span></div>' +
-        '<section><h2>■ 접수 정보</h2><div class="tbl-scroll"><table ' + T + '><tbody><tr><th style="width:14%">접수번호</th><td style="width:36%">RC-2026-1028-0417</td><th style="width:14%">부품 고유번호</th><td>EVM-2611-00417 <span style="font-size:12px;color:var(--navy)">[라벨 스캔 확인]</span></td></tr><tr><th>시료명</th><td>구동모터 (PMSM) · 현대 코나 일렉트릭 2020</td><th>의뢰자</th><td>[재제조사명]</td></tr><tr><th>접수일</th><td>2026-10-28</td><th>시험일</th><td><input type="text" id="labDate" value="2026-11-03" aria-label="시험일" style="width:130px"></td></tr></tbody></table></div></section>' +
-        '<section><h2>■ 시험 조건</h2><div class="tbl-scroll"><table ' + T + ' style="min-width:720px"><tbody><tr><th>주위온도</th><td><input type="text" id="c1" value="23" aria-label="주위온도" style="width:64px;text-align:right"> ℃</td><th>상대습도</th><td><input type="text" id="c2" value="45" aria-label="상대습도" style="width:64px;text-align:right"> %RH</td><th>입력전압</th><td><input type="text" id="c3" value="350" aria-label="입력전압" style="width:64px;text-align:right"> V DC</td></tr><tr><th>회전속도</th><td><input type="text" id="c4" value="3000" aria-label="회전속도" style="width:64px;text-align:right"> rpm</td><th>부하율</th><td><input type="text" id="c5" value="50" aria-label="부하율" style="width:64px;text-align:right"> %</td><th>사용 장비</th><td><select id="c6" aria-label="사용 장비"><option>다이나모 2호기</option><option>다이나모 1호기</option></select></td></tr></tbody></table></div></section>' +
-        '<section><div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline"><h2>■ 측정 결과</h2><span style="font-size:12px;color:#555555">※ 값을 바꾸면 판정과 등급이 바로 다시 계산됩니다. (등급기준 v0.1)</span></div><div class="tbl-scroll"><table ' + T + ' style="min-width:680px"><thead><tr><th style="width:6%;text-align:center">번호</th><th>시험항목</th><th style="width:9%;text-align:center">단위</th><th style="width:26%">기준</th><th style="width:14%;text-align:center">측정값</th><th style="width:9%;text-align:center">판정</th></tr></thead><tbody id="labRows">' + labRows() + '</tbody><tfoot><tr style="background:#F9FAFB"><th colspan="2" style="text-align:center;border-bottom:1px solid #222222">자동 판정</th><td colspan="4" id="labSum" style="border-bottom:1px solid #222222">' + labSummary() + '</td></tr></tfoot></table></div></section>' +
-        '<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start"><section style="flex:3 1 420px;min-width:0"><h2>■ 원본 데이터 첨부</h2><div class="tbl-scroll"><table ' + T + ' style="font-size:13px"><thead><tr><th>파일명</th><th style="width:70px">크기</th><th style="width:150px">해시(SHA-256)</th></tr></thead><tbody id="files"><tr><td>dyno_log_EVM-2611-00417.csv</td><td>2.4MB</td><td>a3f91c07…e42b</td></tr><tr><td>insulation_DC1000V.pdf</td><td>310KB</td><td>7b02d9e4…19c0</td></tr></tbody></table></div>' +
-          '<label class="bo-btn" for="fileAdd" style="display:inline-flex;align-items:center;margin-top:8px;height:32px;font-size:13px">파일 추가</label><input type="file" id="fileAdd" class="sr"></section>' +
-          '<section style="flex:2 1 280px;min-width:0"><h2>■ 결재</h2><table class="bo-tbl" style="border:1px solid #222222;text-align:center;font-size:13px"><tbody><tr><th style="text-align:center">작성</th><th style="text-align:center">검토</th><th style="text-align:center">발행</th></tr><tr><td style="text-align:center;padding:10px">김OO<br><span style="font-size:12px;color:#555555">' + st[0] + '</span></td><td style="text-align:center">이OO<br><span style="font-size:12px;color:#555555">' + st[1] + '</span></td><td style="text-align:center">자동<br><span style="font-size:12px;color:#555555">' + st[2] + '</span></td></tr></tbody></table>' +
-          (lab.status === 'review' ? '<button class="bo-btn navy" type="button" id="approve" style="margin-top:8px;width:100%">기술책임자 승인 (시연용)</button>' : '') + '</section></div>' +
-        '<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid #D9D9D9;padding-top:16px"><button class="bo-btn" type="button" data-toast="시험 접수 목록으로 이동합니다 (시안에서는 이 건만 있습니다).">목록</button><div style="display:flex;gap:6px;flex-wrap:wrap">' +
-          '<a class="bo-btn" href="#report-EVM-2611-00417" data-from="lab" style="display:inline-flex;align-items:center;text-decoration:none;color:#222222">성적서 미리보기</a>' +
-          '<button class="bo-btn gray" type="button" id="labSave"' + (lab.status !== 'draft' ? ' disabled' : '') + '>임시저장</button>' +
-          '<button class="bo-btn navy" type="button" id="labReq"' + (lab.status !== 'draft' ? ' disabled' : '') + '>' + (lab.status === 'draft' ? '검토 요청' : lab.status === 'review' ? '검토 요청됨' : '발행 완료') + '</button></div></div>' +
-      '</main></div></div>';
+  function measureTable(r, lock) {
+    return '<div class="tbl-scroll"><table class="bo-tbl" style="min-width:680px"><thead><tr><th style="width:6%;text-align:center">번호</th><th>시험항목</th><th style="width:9%;text-align:center">단위</th><th style="width:28%">기준</th><th style="width:14%;text-align:center">측정값</th><th style="width:9%;text-align:center">판정</th></tr></thead><tbody>' + labRowsR(r, lock) + '</tbody><tfoot><tr style="background:#F9FAFB"><th colspan="2" style="text-align:center;border-bottom:1px solid #222222">자동 판정</th><td colspan="4" id="labSum" style="border-bottom:1px solid #222222">' + labSumR(r) + '</td></tr></tfoot></table></div>';
+  }
+  function labInput(no) {
+    var r = no ? rcpt(no) : RECEIPTS.filter(function (x) { return x.st === 'testing'; })[0];
+    var T = 'class="bo-tbl"', crumb = '시험관리 &gt; 시험결과 입력';
+    if (!r) return boLayout('lab-input', '시험결과 입력', crumb, '<div class="bo-panel">지금 입력할 시험 건이 없습니다. <a class="bo-link" href="#lab">시험 접수 현황</a>에서 입고된 부품의 시험을 시작하세요.</div>');
+    if (r.st === 'received') return boLayout('lab-input', '시험결과 입력', crumb, '<div class="bo-panel"><b>' + r.no + '</b> ' + rname(r) + '<span>아직 시험을 시작하지 않은 건입니다.</span><div><button type="button" class="bo-btn navy" data-start="' + r.no + '">시험 시작</button></div></div>');
+    if (r.st === 'issued') return boLayout('lab-input', '시험결과 입력', crumb, '<div class="bo-panel"><b>' + r.no + '</b> 발행이 완료된 건입니다. <a class="bo-link" href="#report-' + r.pid + '" data-from="lab">성적서 보기</a></div>');
+    var lock = r.st !== 'testing', u = state.user;
+    var st = r.st === 'testing' ? ['작성 중', '대기'] : ['요청 완료', '검토 중'];
+    var body = (r.rejectNote && r.st === 'testing' ? '<div class="bo-panel" style="background:#FDECEA;border-color:#E8A9A2"><b>반려됨</b> 사유: ' + esc(r.rejectNote) + '</div>' : '') +
+      (lock ? '<div class="bo-panel" style="background:#FFF8EC;border-color:#E9C58E">기술책임자 검토 중이라 수정할 수 없습니다. <a class="bo-link" href="#lab-approve">결재 대기함 보기</a></div>' : '') +
+      '<section><h2>■ 접수 정보</h2><div class="tbl-scroll"><table ' + T + '><tbody><tr><th style="width:14%">접수번호</th><td style="width:36%">' + r.no + '</td><th style="width:14%">부품 고유번호</th><td>' + r.pid + ' <span style="font-size:12px;color:var(--navy)">[라벨 스캔 확인]</span></td></tr><tr><th>시료명</th><td>' + rname(r) + '</td><th>의뢰자</th><td>가나재제조</td></tr><tr><th>접수일</th><td>' + r.date + '</td><th>시험일</th><td><input type="text" id="labDate" value="2026-11-14" aria-label="시험일" style="width:130px"' + (lock ? ' disabled' : '') + '></td></tr></tbody></table></div></section>' +
+      '<section><h2>■ 시험 조건</h2><div class="tbl-scroll"><table ' + T + ' style="min-width:720px"><tbody>' + condHtml(r, lock) + '</tbody></table></div></section>' +
+      '<section><div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline"><h2>■ 측정 결과</h2><span style="font-size:12px;color:#555555">※ 값을 넣으면 판정과 등급이 바로 계산됩니다. (등급기준 v0.1)</span></div>' + measureTable(r, lock) + '</section>' +
+      '<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start"><section style="flex:3 1 420px;min-width:0"><h2>■ 원본 데이터 첨부</h2><div class="tbl-scroll"><table ' + T + ' style="font-size:13px"><thead><tr><th>파일명</th><th style="width:70px">크기</th><th style="width:150px">해시(SHA-256)</th></tr></thead><tbody>' +
+        (r.files.length ? r.files.map(function (f) { return '<tr><td>' + esc(f[0]) + '</td><td>' + f[1] + '</td><td>' + f[2] + '</td></tr>'; }).join('') : '<tr><td colspan="3" style="color:#555555">첨부한 파일이 없습니다.</td></tr>') + '</tbody></table></div>' +
+        (lock ? '' : '<label class="bo-btn" for="fileAdd" style="display:inline-flex;align-items:center;margin-top:8px;height:32px;font-size:13px">파일 추가</label><input type="file" id="fileAdd" data-r="' + r.no + '" class="sr">') + '</section>' +
+        '<section style="flex:2 1 280px;min-width:0"><h2>■ 결재</h2><table class="bo-tbl" style="border:1px solid #222222;font-size:13px"><tbody><tr><th style="text-align:center">작성</th><th style="text-align:center">검토</th><th style="text-align:center">발행</th></tr><tr><td style="text-align:center;padding:10px">' + (r.writer || u.name) + '<br><span style="font-size:12px;color:#555555">' + st[0] + '</span></td><td style="text-align:center">이OO<br><span style="font-size:12px;color:#555555">' + st[1] + '</span></td><td style="text-align:center">자동<br><span style="font-size:12px;color:#555555">승인 후</span></td></tr></tbody></table></section></div>' +
+      '<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid #D9D9D9;padding-top:16px"><a class="bo-btn" href="#lab" style="display:inline-flex;align-items:center;text-decoration:none;color:#222222">목록</a><div style="display:flex;gap:6px;flex-wrap:wrap">' +
+        '<button class="bo-btn gray" type="button" data-labsave="' + r.no + '"' + (lock ? ' disabled' : '') + '>임시저장</button>' +
+        '<button class="bo-btn navy" type="button" data-labreq="' + r.no + '"' + (lock ? ' disabled' : '') + '>' + (lock ? '검토 요청됨' : '검토 요청') + '</button></div></div>';
+    return boLayout('lab-input', '시험결과 입력', crumb, body);
+  }
+  function labRequest(no) {
+    var r = rcpt(no);
+    if (evaluate(r.v, TYPES[r.type].items).count['미입력']) { toast('측정값을 모두 입력해야 검토를 요청할 수 있습니다.'); return; }
+    r.st = 'review'; r.reqDate = '2026-11-14'; r.writer = state.user.name; r.rejectNote = '';
+    toast('이OO 기술책임자에게 검토를 요청했습니다.'); location.hash = 'lab-approve';
+  }
+  function labApprove() {
+    var list = RECEIPTS.filter(function (r) { return r.st === 'review'; }), isTm = state.user.role === 'tm', dis = isTm ? '' : ' disabled';
+    var head = isTm ? '' : '<div class="bo-panel" style="background:#FFF8EC;border-color:#E9C58E">승인과 반려는 기술책임자만 할 수 있습니다. 지금은 ' + esc(state.user.name) + ' ' + state.user.label + ' 계정입니다.<div><button type="button" class="bo-btn navy" data-login="tm">기술책임자(이OO)로 전환 (시연)</button></div></div>';
+    var body = list.length ? list.map(function (r) {
+      var ev = evaluate(r.v, TYPES[r.type].items);
+      return '<section class="bo-panel"><div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px"><div><b>' + r.no + '</b> · ' + rname(r) + '<br><span style="font-size:13px;color:#555555">고유번호 ' + r.pid + ' · 작성 ' + (r.writer || '김OO') + ' 시험원 · 검토 요청 ' + (r.reqDate || '-') + '</span></div><div>' + rpill(r.st) + '</div></div>' +
+        '<div class="tbl-scroll"><table class="bo-tbl" style="min-width:600px;font-size:13px"><thead><tr><th>시험항목</th><th>기준</th><th style="text-align:right">측정값</th><th style="text-align:center">판정</th></tr></thead><tbody>' + ev.rows.map(function (rw) { return '<tr><td>' + rw.it.name + '</td><td>' + crit(rw.it) + '</td><td class="num" style="text-align:right">' + fmt(rw.value) + ' ' + rw.it.unit + '</td><td style="text-align:center;font-weight:700;color:' + vColor(rw.verdict) + '">' + rw.verdict + '</td></tr>'; }).join('') + '</tbody></table></div>' +
+        '<div><b>자동 판정</b> ' + ev.grade + '등급 (' + GRADE[ev.grade].label + ') · 권장 용도 ' + GRADE[ev.grade].use.join(', ') + ' · 판매 희망가 ' + won(r.price) + '원 · 원본 파일 ' + r.files.length + '건</div>' +
+        '<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><label class="sr" for="rej-' + r.no + '">반려 사유</label><input type="text" id="rej-' + r.no + '" placeholder="반려할 때 사유를 입력하세요" style="flex:1 1 240px;height:40px"' + dis + '><button type="button" class="bo-btn" data-reject="' + r.no + '"' + dis + '>반려</button><button type="button" class="bo-btn navy" data-approve="' + r.no + '"' + dis + '>승인 · 성적서 발행</button></div></section>';
+    }).join('') : '<div class="bo-panel">결재 대기 중인 시험 건이 없습니다. <a class="bo-link" href="#lab-issued">발행 내역 보기</a></div>';
+    return boLayout('lab-approve', '결재 대기', '시험관리 &gt; 결재 대기', head + body);
+  }
+  function approve(no) {
+    var r = rcpt(no), rd = r.date.slice(5).replace('-', '.');
+    var p = P(r.pid, r.maker, r.car, r.year, r.km, r.price, Object.assign({}, r.v), [r.recv, rd, '11.14', '11.14'], r.imgs, r.type);
+    p.rc = r.no; prep(p); PARTS.push(p); byId[p.id] = p; r.st = 'issued';
+    rerender(); toast('승인했습니다. 성적서 ' + p.report + '를 발행하고 판매 목록에 올렸습니다.');
+  }
+  function reject(no) {
+    var r = rcpt(no), reason = document.getElementById('rej-' + no).value.trim();
+    if (!reason) { toast('반려 사유를 입력해 주세요.'); return; }
+    r.st = 'testing'; r.rejectNote = reason; rerender(); toast('반려했습니다. 시험원에게 사유가 전달됩니다.');
+  }
+  function labIssued() {
+    var list = PARTS.slice().sort(function (a, b) { return b.d[3].localeCompare(a.d[3]); });
+    var body = '<section><h2>■ 발행한 성적서 (' + list.length + '건)</h2><div class="tbl-scroll"><table class="bo-tbl" style="min-width:820px;font-size:13px"><thead><tr><th>성적서 번호</th><th>부품 고유번호</th><th>시료</th><th style="text-align:center">등급</th><th>발행일</th><th style="text-align:center">판 수</th><th>관리</th></tr></thead><tbody>' + list.map(function (p) {
+      return '<tr><td>' + p.report + '</td><td>' + p.id + '</td><td>' + TYPES[p.type].full + ' · ' + p.maker + ' ' + p.car + '</td><td style="text-align:center;font-weight:700;color:' + GRADE[p.grade].color + '">' + p.grade + '</td><td>2026-' + p.d[3].replace('.', '-') + '</td><td style="text-align:center">v' + p.ver + '</td><td><a class="bo-link" href="#report-' + p.id + '" data-from="lab">성적서</a> · <a class="bo-link" href="#lab-fix-' + p.id + '">정정</a></td></tr>';
+    }).join('') + '</tbody></table></div></section>';
+    return boLayout('lab-issued', '발행 내역', '성적서관리 &gt; 발행 내역', body);
+  }
+  function labFix(pid) {
+    var p = pid ? byId[pid] : null;
+    var pick = '<div class="bo-panel"><label for="fixPick" style="font-weight:700">정정할 성적서</label><select id="fixPick" style="height:36px;max-width:100%"><option value="">선택해 주세요</option>' + PARTS.map(function (x) { return '<option value="' + x.id + '"' + (p && x.id === p.id ? ' selected' : '') + '>' + x.report + ' · ' + pname(x) + ' (' + x.id + ')</option>'; }).join('') + '</select><span style="font-size:12px;color:#555555">정정하면 판 수가 올라가고, 이전 판과 정정 사유가 함께 남습니다. 구매자 화면에도 정정 이력이 표시됩니다.</span></div>';
+    if (!p) return boLayout('lab-fix', '정정·재발행', '성적서관리 &gt; 정정·재발행', pick);
+    if (!state.fix || state.fix.pid !== p.id) state.fix = { no: 'FIX', pid: p.id, type: p.type, v: Object.assign({}, p.v) };
+    var body = pick + '<form id="fixForm" class="bo-panel" novalidate><b>' + p.report + ' · 현재 v' + p.ver + ' · ' + p.grade + '등급</b>' + measureTable(state.fix, false) +
+      '<label for="fixReason" style="font-weight:700">정정 사유 <span style="color:var(--bad)">*</span></label><input type="text" id="fixReason" placeholder="예: 진동 측정값 단위 입력 오류 수정" style="height:40px"><span class="err" id="fixReasonErr" style="color:var(--bad);font-size:12px" hidden>정정 사유를 입력해 주세요.</span>' +
+      (p.revs.length ? '<div style="font-size:13px;color:#555555">정정 이력: ' + p.revs.map(function (r) { return 'v' + r.ver + ' (' + r.date + ') ' + esc(r.reason); }).join(' / ') + '</div>' : '') +
+      '<div><button class="bo-btn navy" type="submit">v' + (p.ver + 1) + '로 정정 발행</button></div></form>';
+    return boLayout('lab-fix', '정정·재발행', '성적서관리 &gt; 정정·재발행', body);
+  }
+  function labEquip() {
+    var eq = [['모터 다이나모 1호기', 'EQ-001', '2026-03-20', '2027-03-31', '정상'], ['모터 다이나모 2호기', 'EQ-002', '2026-03-20', '2027-03-31', '정상'], ['절연저항계', 'EQ-011', '2026-01-15', '2027-01-14', '정상'], ['전력분석기 1호기', 'EQ-021', '2025-12-02', '2026-12-01', '만료 임박'], ['인버터 부하시험대', 'EQ-022', '2026-04-08', '2027-04-07', '정상'], ['진동측정기', 'EQ-031', '2026-05-10', '2027-05-09', '정상'], ['소음계', 'EQ-032', '2026-05-10', '2027-05-09', '정상'], ['감속기 시험대', 'EQ-041', '2026-02-11', '2027-02-10', '정상'], ['충전기 시험대', 'EQ-051', '2026-04-03', '2027-04-02', '정상']];
+    var body = '<section><h2>■ 시험 장비 교정 현황</h2><div class="tbl-scroll"><table class="bo-tbl" style="min-width:640px;font-size:13px"><thead><tr><th>장비</th><th>관리번호</th><th>최근 교정일</th><th>교정 유효기간</th><th>상태</th></tr></thead><tbody>' + eq.map(function (e) { return '<tr><td>' + e[0] + '</td><td>' + e[1] + '</td><td>' + e[2] + '</td><td>' + e[3] + '</td><td>' + pill(e[4], e[4] === '정상' ? 'green' : 'orange') + '</td></tr>'; }).join('') + '</tbody></table></div></section>' +
+      '<div class="bo-panel">교정 유효기간이 지난 장비는 시험결과 입력 화면에서 고를 수 없게 합니다. (안)</div>';
+    return boLayout('lab-equip', '장비·교정 정보', '기준정보 &gt; 장비·교정 정보', body);
   }
 
   /* ---------- router ---------- */
@@ -973,9 +1375,11 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
   var lastRoute = '';
   function route() {
     var h = location.hash.replace('#', '') || 'home';
-    var m = h.match(/^(quote-done|order-done|part|quote|order|report|verify)-(.+)$/);
-    var key = m ? m[1] : h, id = m ? m[2] : null;
-    var routeBase = key + (id ? '-' + id : '');
+    var am = h.match(/^(my|seller|lab)(?:-([a-z]+))?(?:-(.+))?$/);
+    var m = am ? null : h.match(/^(quote-done|order-done|part|quote|order|report|verify)-(.+)$/);
+    var key = am ? am[1] : m ? m[1] : h, id = m ? m[2] : null, sub = am ? am[2] : null, arg = am ? am[3] : null;
+    var routeBase = am ? h : key + (id ? '-' + id : '');
+    if (key === 'join' && lastRoute !== 'join') state.joinDone = null;
     if (key === 'part' && lastRoute.indexOf('part-' + id) !== 0) { state.tab = 'test'; state.photo = 0; }
     var html;
     switch (key) {
@@ -994,12 +1398,17 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       case 'standard': html = viewStandard(); break;
       case 'labs': html = viewLabs(); break;
       case 'sell': html = viewSell(); break;
-      case 'lab': html = viewLab(); break;
+      case 'login': html = viewLogin(); break;
+      case 'join': html = viewJoin(); break;
+      case 'my': html = viewMy(sub); break;
+      case 'seller': html = viewSeller(sub); break;
+      case 'lab': html = viewLabSys(sub, arg); break;
       default: html = viewNotFound();
     }
     app.innerHTML = html;
+    prefill();
     document.querySelectorAll('[data-demo]').forEach(function (a) {
-      var on = (a.dataset.demo === 'lab' && key === 'lab') || (a.dataset.demo === 'verify' && key === 'verify') || (a.dataset.demo === 'shop' && key !== 'lab' && key !== 'verify');
+      var on = a.dataset.demo === key || (a.dataset.demo === 'shop' && ['lab', 'verify', 'seller'].indexOf(key) < 0);
       a.classList.toggle('on', on);
     });
     if (routeBase !== lastRoute) window.scrollTo(0, 0);
@@ -1015,6 +1424,18 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     if (from) state.from = from.dataset.from;
     else if (e.target.closest('a[href^="#report-"]')) state.from = 'shop';
     var g;
+    if ((g = e.target.closest('[data-login]'))) { login(ACCOUNTS[g.dataset.login]); return; }
+    if (e.target.closest('[data-logout]')) { logout(); return; }
+    if ((g = e.target.closest('[data-wish]'))) { toggleWish(g.dataset.wish); return; }
+    if (e.target.closest('[data-next]')) state.next = location.hash.slice(1) || 'home';
+    if ((g = e.target.closest('[data-advance]'))) { var od = ORDERS.filter(function (o) { return o.no === g.dataset.advance; })[0]; var oi = OST.indexOf(od.st); if (oi < 3) od.st = OST[oi + 1]; rerender(); toast('주문 상태를 “' + od.st + '”(으)로 바꿨습니다. (시연)'); return; }
+    if ((g = e.target.closest('[data-confirm]'))) { ORDERS.filter(function (o) { return o.no === g.dataset.confirm; })[0].st = '구매확정'; rerender(); toast('구매확정했습니다. 판매자 정산이 진행됩니다.'); return; }
+    if ((g = e.target.closest('[data-stage]'))) { state.sstage = g.dataset.stage; rerender(); return; }
+    if ((g = e.target.closest('[data-start]'))) { rcpt(g.dataset.start).st = 'testing'; toast('시험을 시작했습니다. 측정값을 입력하세요.'); location.hash = 'lab-input-' + g.dataset.start; return; }
+    if ((g = e.target.closest('[data-labsave]'))) { toast('임시저장했습니다.'); return; }
+    if ((g = e.target.closest('[data-labreq]'))) { labRequest(g.dataset.labreq); return; }
+    if ((g = e.target.closest('[data-approve]'))) { approve(g.dataset.approve); return; }
+    if ((g = e.target.closest('[data-reject]'))) { reject(g.dataset.reject); return; }
     if ((g = e.target.closest('[data-typeonly]'))) { state.type = g.dataset.typeonly; state.grades = { A: true, B: true, C: true }; state.use = '전체'; state.q = ''; state.maker = ''; state.car = ''; state.year = ''; return; }
     if ((g = e.target.closest('[data-type]'))) { state.type = g.dataset.type; rerender(); return; }
     if ((g = e.target.closest('[data-q]'))) { state.q = g.dataset.q; state.type = ''; state.grades = { A: true, B: true, C: true }; state.use = '전체'; state.maker = ''; state.car = ''; state.year = ''; location.hash = 'list'; return; }
@@ -1028,18 +1449,6 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     if ((g = e.target.closest('[data-photo]'))) { state.photo = state.photo + Number(g.dataset.photo); rerender(); return; }
     if (e.target.closest('#resetCar')) { state.maker = ''; state.car = ''; state.year = ''; rerender(); return; }
     if (e.target.closest('#clearAll')) { state.q = ''; state.type = ''; state.car = ''; state.maker = ''; state.year = ''; state.use = '전체'; state.grades = { A: true, B: true, C: true }; rerender(); return; }
-    if (e.target.closest('#labSave')) { toast('임시저장했습니다.'); return; }
-    if (e.target.closest('#labReq')) {
-      var ev = evaluate(lab.values);
-      if (ev.count['미입력']) { toast('측정값을 모두 입력해야 검토를 요청할 수 있습니다.'); return; }
-      lab.status = 'review'; rerender(); toast('이OO 기술책임자에게 검토를 요청했습니다.'); return;
-    }
-    if (e.target.closest('#approve')) {
-      lab.status = 'done'; var p = byId['EVM-2611-00417'];
-      Object.assign(p.v, lab.values); var ev2 = evaluate(p.v); p.ev = ev2; p.grade = ev2.grade; p.use = GRADE[p.grade].use;
-      p.effPct = p.v.eff; p.tqPct = Math.round(p.v.tq / REF.tq * 1000) / 10;
-      rerender(); toast('승인되었습니다. 성적서가 발행되고 판매 목록에 반영됩니다.'); return;
-    }
   });
   document.addEventListener('change', function (e) {
     var el = e.target;
@@ -1049,12 +1458,12 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     else if (el.id === 'fYear') { state.year = el.value; rerender(); }
     else if (el.id === 'sort') { state.sort = el.value; rerender(); }
     else if (el.id === 'fileAdd' && el.files && el.files[0]) {
-      var f = el.files[0]; var tr = document.createElement('tr');
-      tr.innerHTML = '<td>' + esc(f.name) + '</td><td>' + (f.size > 1048576 ? (f.size / 1048576).toFixed(1) + 'MB' : Math.max(1, Math.round(f.size / 1024)) + 'KB') + '</td><td>계산 중…</td>';
-      document.getElementById('files').appendChild(tr);
-      setTimeout(function () { tr.lastChild.textContent = Math.random().toString(16).slice(2, 10) + '…' + Math.random().toString(16).slice(2, 6); }, 600);
-      toast('파일을 첨부했습니다. (시안: 파일은 저장되지 않습니다)');
+      var f = el.files[0], fr = rcpt(el.dataset.r);
+      fr.files.push([f.name, f.size > 1048576 ? (f.size / 1048576).toFixed(1) + 'MB' : Math.max(1, Math.round(f.size / 1024)) + 'KB', Math.random().toString(16).slice(2, 10) + '…' + Math.random().toString(16).slice(2, 6)]);
+      rerender(); toast('파일을 첨부했습니다. (시안: 파일 내용은 저장되지 않습니다)');
     }
+    else if (el.name === 'jType') { document.getElementById('orgBox').hidden = el.value === 'personal'; }
+    else if (el.id === 'fixPick') { state.fix = null; location.hash = el.value ? 'lab-fix-' + el.value : 'lab-fix'; }
     else if (el.name === 'ship') {
       var visit = el.value === 'visit';
       document.getElementById('addrBox').hidden = visit;
@@ -1071,13 +1480,14 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
   document.addEventListener('input', function (e) {
     var el = e.target;
     if (el.dataset.m) {
-      lab.values[el.dataset.m] = el.value === '' ? '' : Number(el.value.replace(/,/g, ''));
-      var it = ITEMS.filter(function (x) { return x.key === el.dataset.m; })[0];
-      var j = judge(it, lab.values[it.key]);
+      var rr = el.dataset.r === 'FIX' ? state.fix : rcpt(el.dataset.r);
+      rr.v[el.dataset.m] = el.value === '' ? '' : Number(el.value.replace(/,/g, ''));
+      var it = TYPES[rr.type].items.filter(function (x) { return x.key === el.dataset.m; })[0];
+      var j = judge(it, rr.v[it.key]);
       var cell = document.getElementById('v-' + it.key);
       cell.textContent = j.verdict; cell.style.color = vColor(j.verdict); cell.style.fontWeight = j.verdict === '적합' ? '400' : '700';
       el.classList.toggle('warn', j.verdict === '주의'); el.classList.toggle('bad', j.verdict === '부적합');
-      document.getElementById('labSum').innerHTML = labSummary();
+      document.getElementById('labSum').innerHTML = labSumR(rr);
     }
   });
   function need(id) {
@@ -1106,6 +1516,41 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       document.getElementById('qaErr').hidden = !!txt; if (!txt) return;
       (state.qa[pid] = state.qa[pid] || []).unshift({ q: txt, a: '', st: '답변 대기' }); rerender(); toast('문의가 등록되었습니다.'); return;
     }
+    if (f.id === 'loginForm') {
+      var lid = document.getElementById('loginId').value.trim(), lpw = document.getElementById('loginPw').value;
+      document.getElementById('loginIdErr').hidden = !!lid; document.getElementById('loginPwErr').hidden = !!lpw;
+      if (!lid || !lpw) return;
+      login(ACCOUNTS[lid] || { role: 'buyer', id: lid, name: lid, org: '개인', label: '구매자' }); return;
+    }
+    if (f.id === 'joinForm') {
+      var jt = document.querySelector('input[name="jType"]:checked').value, orgNeed = jt !== 'personal';
+      var jok = ['jName', 'jId', 'jPw', 'jPhone'].concat(orgNeed ? ['jOrg', 'jBiz'] : []).map(need).every(Boolean);
+      var ja = document.getElementById('jAgree1').checked && document.getElementById('jAgree2').checked;
+      document.getElementById('jAgreeErr').hidden = ja; if (!ja) jok = false;
+      if (!jok) { toast('필수 항목을 확인해 주세요.'); return; }
+      var jn = document.getElementById('jName').value.trim(), jo = orgNeed ? document.getElementById('jOrg').value.trim() : '개인';
+      state.joinDone = { type: jt, name: jn, org: jo };
+      if (jt === 'personal' || jt === 'company') { state.user = { role: 'buyer', id: document.getElementById('jId').value.trim(), name: jn, org: jo, label: '구매자', phone: document.getElementById('jPhone').value }; saveUser(null); }
+      rerender(); window.scrollTo(0, 0); return;
+    }
+    if (f.id === 'myCarForm') {
+      var mk = document.getElementById('mCar').value; if (!mk) { toast('차종을 선택해 주세요.'); return; }
+      state.myCar = { maker: mk.split('|')[0], car: mk.split('|')[1], year: document.getElementById('mYear').value }; rerender(); toast('내 차량을 저장했습니다. 부품 목록에 호환 여부가 표시됩니다.'); return;
+    }
+    if (f.dataset.reply) {
+      var rq = QUOTES.filter(function (q) { return q.no === f.dataset.reply; })[0];
+      var rpv = document.getElementById('rp-' + rq.no).value, rmv = document.getElementById('rm-' + rq.no).value.trim();
+      if (!rpv) { toast('개당 견적가를 입력해 주세요.'); return; }
+      rq.st = '회신 완료'; rq.reply = '개당 ' + won(Number(rpv)) + '원' + (rmv ? '. ' + rmv : '');
+      rerender(); toast(rq.company + '에 견적을 회신했습니다.'); return;
+    }
+    if (f.id === 'fixForm') {
+      var fp = byId[state.fix.pid], reason = document.getElementById('fixReason').value.trim();
+      document.getElementById('fixReasonErr').hidden = !!reason; if (!reason) return;
+      if (evaluate(state.fix.v, TYPES[fp.type].items).count['미입력']) { toast('측정값을 모두 입력해 주세요.'); return; }
+      fp.v = Object.assign({}, state.fix.v); fp.ver += 1; fp.revs.push({ ver: fp.ver, date: TODAY, reason: reason }); prep(fp);
+      state.fix = null; rerender(); toast('v' + fp.ver + '로 정정 발행했습니다. 상세 페이지와 성적서에 반영됩니다.'); return;
+    }
     if (f.id === 'quoteForm') {
       var ok = ['qCompany', 'qName', 'qPhone'].map(need).every(Boolean);
       var use = document.getElementById('qUse').value; if (!use) { toast('사용 용도를 선택해 주세요.'); ok = false; }
@@ -1113,6 +1558,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       if (!ok) return;
       var qid = (location.hash.match(/quote-(.+)$/) || [])[1];
       state.lastQuote = { no: 'Q-2026-' + String(Date.now()).slice(-6), qty: document.getElementById('qQty').value || 1, use: use, company: document.getElementById('qCompany').value, name: document.getElementById('qName').value, phone: document.getElementById('qPhone').value };
+      QUOTES.unshift({ no: state.lastQuote.no, id: qid, date: TODAY, qty: Number(state.lastQuote.qty), use: use, company: state.lastQuote.company, name: state.lastQuote.name, st: '접수', reply: '', buyer: state.user ? state.user.id : 'guest' });
       location.hash = 'quote-done-' + qid; return;
     }
     if (f.id === 'orderForm') {
@@ -1125,6 +1571,8 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       var payEl = document.querySelector('input[name="pay"]:checked');
       var payName = { bank: '무통장 입금', card: '카드 결제', tax: '세금계산서 발행 (계좌이체)' }[payEl.value];
       state.lastOrder = { no: 'OD-2026-' + String(Date.now()).slice(-6), pay: payName, payKey: payEl.value, ship: visit ? '방문 수령 · [창고 위치]' : '화물 배송 (착불) · ' + document.getElementById('oAddr').value };
+      ORDERS.unshift({ no: state.lastOrder.no, id: oid, date: TODAY, price: byId[oid].price, pay: payName, payKey: payEl.value, ship: visit ? '방문 수령' : '화물 배송 (착불)', st: payEl.value === 'card' ? '결제 완료' : '입금 대기', buyer: state.user ? state.user.id : 'guest' });
+      byId[oid].sold = true; state.compare = state.compare.filter(function (x) { return x !== oid; });
       location.hash = 'order-done-' + oid; return;
     }
     if (f.id === 'sellForm') {
