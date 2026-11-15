@@ -782,7 +782,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
   }
   function footer() {
     return '<footer class="site-footer"><div class="wrap"><div>' +
-      '<div class="links"><a href="#" data-toast="약관 페이지는 준비 중입니다.">이용약관</a><a href="#" data-toast="개인정보처리방침은 준비 중입니다."><b>개인정보처리방침</b></a><a href="#notice">공지사항</a><a href="#faq">자주 묻는 질문</a><a href="#qna">1:1 문의</a><a href="#labs">시험기관 안내</a><a href="#credits">사진 출처</a></div>' +
+      '<div class="links"><a href="#" data-toast="약관 페이지는 준비 중입니다.">이용약관</a><a href="#" data-toast="개인정보처리방침은 준비 중입니다."><b>개인정보처리방침</b></a><a href="#notice">공지사항</a><a href="#faq">자주 묻는 질문</a><a href="#qna">1:1 문의</a><a href="#complain"><b>민원창구</b></a><a href="#labs">시험기관 안내</a><a href="#credits">사진 출처</a></div>' +
       '<div>운영사 : 솔엔지니어링 &nbsp;|&nbsp; 시험 협력 : 경북테크노파크(예정) &nbsp;|&nbsp; 주소 : [주소]</div>' +
       '<div>사업자등록번호 : [번호] &nbsp;|&nbsp; 통신판매업 신고번호 : [번호]</div>' +
       '<div>사업계획용 시안입니다. 실제 결제와 접수는 이루어지지 않습니다.</div></div>' +
@@ -1253,6 +1253,66 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       '<div><button class="btn dark" type="submit" style="min-width:200px">문의 등록</button></div></form></div></div>';
     return shop('', html);
   }
+  /* ---------- 민원창구 ---------- */
+  var COMPLAINTS = [
+    { no: 'C-2611-0009', type: '배송·파손', part: 'EVR-2611-00055', date: '11.13', st: '사실 확인 중', done: '', act: '운송사 사진과 출고 전 사진 대조 중' },
+    { no: 'C-2611-0008', type: '성적서 오류', part: 'EVI-2611-00102', date: '11.11', st: '처리 완료', done: '11.13', act: '측정 단위 표기 오류 확인, 성적서 정정판 발행(이전 판·사유 공개)' },
+    { no: 'C-2611-0007', type: '부품 불일치', part: 'EVM-2611-00417', date: '11.10', st: '처리 완료', done: '11.12', act: '봉인 라벨 고유번호와 성적서 사진 대조 결과 동일 부품, 장착 커넥터 안내' },
+    { no: 'C-2611-0006', type: '교환·반품', part: 'EVO-2611-00031', date: '11.06', st: '처리 완료', done: '11.11', act: '수령 7일 이내·라벨 정상 확인, 판매자 반품 승인' },
+    { no: 'C-2610-0005', type: '판매자 응대', part: '', date: '10.29', st: '처리 완료', done: '10.30', act: '판매자 응답 지연 확인, 판매자 등급 평가에 반영' }
+  ];
+  var CMP_TYPES = ['부품 불일치', '성적서 오류', '배송·파손', '교환·반품', '판매자 응대', '기타'];
+  function cmpPill(st) { return '<span class="pill ' + (st === '처리 완료' ? 'green' : st === '접수' ? 'blue' : 'orange') + '">' + st + '</span>'; }
+  function cmpTrack(c) {
+    var stage = c.st === '접수' ? 1 : c.st === '사실 확인 중' ? 2 : 4;
+    var steps = ['접수', '1차 답변', '사실 확인', '처리 결과 안내'];
+    return '<ol class="steps" style="grid-template-columns:repeat(4,1fr)">' + steps.map(function (t, i) {
+      var on = i < stage; return '<li style="' + (on ? '' : 'color:var(--sub)') + '"><span class="n">' + (i + 1 < 10 ? '0' : '') + (i + 1) + '</span><b>' + (on ? '✓ ' : '') + t + '</b></li>';
+    }).join('') + '</ol>';
+  }
+  function viewComplain() {
+    if (state.cmpDone) {
+      var nc = COMPLAINTS.filter(function (c) { return c.no === state.cmpDone; })[0];
+      return shop('', '<div class="wrap"><div class="done" style="max-width:760px"><div class="mark">' + ICON_CHECK + '</div><h1>민원이 접수되었습니다</h1><p style="margin:0;color:var(--sub)">접수번호 <b class="num">' + esc(nc.no) + '</b> · 영업일 기준 1일 안에 1차 답변을 드리고, 7일 안에 처리 결과를 안내합니다.</p>' + cmpTrack(nc) +
+        '<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center"><a class="btn" href="#complain" data-cmpnew>민원창구로</a><a class="btn dark" href="#home">홈으로</a></div></div></div>');
+    }
+    var look = state.cmpLook ? COMPLAINTS.filter(function (c) { return c.no.toUpperCase() === state.cmpLook.toUpperCase(); })[0] : null;
+    var stepTxt = [['01', '접수', '홈페이지 민원창구, 고객센터 전화'], ['02', '1차 답변', '영업일 기준 1일 안 담당자 배정·연락'], ['03', '사실 확인', 'QR 이력, 봉인 라벨 사진, 장비 원본 파일, 판매자·시험기관 의견'], ['04', '처리 결과 안내', '접수 후 7일 안 (추가 시험이 필요하면 일정 안내)'], ['05', '개선 반영', '월별 유형 집계 → 등급 기준·판매자 등급·화면 개선']];
+    var html = '<div class="wrap"><div class="page" style="max-width:none">' +
+      '<div><h1>민원창구</h1><p class="lead">부품 불일치, 성적서 오류, 배송·반품 같은 거래 불만을 접수하면 처리 단계와 결과를 공개합니다.</p></div>' +
+      '<div class="note">EV부품이력은 판매자와 구매자를 잇는 통신판매중개자이며 거래 당사자가 아닙니다. 다만 판매자와 구매자 사이의 불만·분쟁은 아래 절차에 따라 접수부터 처리까지 함께 확인합니다. 처리 결과에 동의하지 않으면 1372 소비자상담센터 등 외부 기관에 상담·조정을 신청할 수 있습니다.</div>' +
+      '<section style="display:flex;flex-direction:column;gap:12px"><h2 class="h-sec">처리 절차와 기한</h2><ol class="steps">' + stepTxt.map(function (x) { return '<li><span class="n">' + x[0] + '</span><b>' + x[1] + '</b><small>' + x[2] + '</small></li>'; }).join('') + '</ol></section>' +
+      '<div class="form-page" style="padding-block:0"><form class="form-main" id="cmpForm" novalidate><h2 class="h-sec" style="margin:0">민원 접수</h2>' +
+        '<div class="fgrid"><div class="field"><label for="cpType">민원 유형</label><select id="cpType">' + CMP_TYPES.map(function (t) { return '<option>' + t + '</option>'; }).join('') + '</select></div>' + fieldInput('cpPart', '주문번호 또는 부품 고유번호', '예: EVM-2611-00417', false) + '</div>' +
+        fieldInput('cpTitle', '제목', '', true) +
+        '<div class="field"><label for="cpBody">내용 <span class="req">*</span></label><textarea id="cpBody" placeholder="언제, 어떤 부품에서, 무엇이 문제였는지 적어 주세요. 받은 부품의 라벨 사진이 있으면 확인이 빠릅니다."></textarea><span class="err" id="cpBodyErr" hidden>내용을 입력해 주세요.</span></div>' +
+        '<div class="field"><label for="cpFile">사진 첨부 (라벨, 부품, 포장 상태)</label><input id="cpFile" type="file" accept="image/*" multiple></div>' +
+        '<div class="fgrid">' + fieldInput('cpName', '이름', '', false) + fieldInput('cpPhone', '연락처', '010-0000-0000', true, 'tel') + '</div>' +
+        '<label style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="cpAgree" style="width:18px;height:18px;accent-color:var(--ink)"> 개인정보 수집·이용에 동의합니다. (민원 처리 목적, 3년 보관) <span class="req" style="color:var(--bad)">*</span></label><span class="err" id="cpAgreeErr" style="color:var(--bad);font-size:12px" hidden>동의가 필요합니다.</span>' +
+        '<label style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="cpOpen" checked style="width:18px;height:18px;accent-color:var(--ink)"> 처리 결과를 개인정보를 뺀 요약으로 공개하는 데 동의합니다. (선택)</label>' +
+        '<div><button class="btn dark" type="submit" style="min-width:200px">민원 접수</button></div></form>' +
+        '<aside class="form-side panel"><b>처리 현황 조회</b><form id="cmpLook" novalidate style="display:flex;gap:6px"><label class="sr" for="clNo">접수번호</label><input id="clNo" type="text" placeholder="예: C-2611-0009" value="' + esc(state.cmpLook || '') + '" style="flex:1;min-width:0;height:38px"><button class="btn sm dark" type="submit">조회</button></form>' +
+        (state.cmpLook ? (look ? '<div style="display:flex;flex-direction:column;gap:6px;font-size:13px"><div class="sum-row"><span>' + look.no + '</span>' + cmpPill(look.st) + '</div><div class="sum-row"><span>유형</span><span>' + look.type + '</span></div><div class="sum-row"><span>접수일</span><span>2026.' + look.date + '</span></div>' + (look.act ? '<div style="color:var(--ink-2);line-height:1.6">' + esc(look.act) + '</div>' : '') + '</div>' : '<small style="color:var(--bad)">해당 접수번호가 없습니다.</small>') : '<small style="color:var(--sub)">접수 후 받은 번호로 진행 단계를 확인할 수 있습니다.</small>') +
+        '<div class="sum-row"><span>고객센터</span><span>[대표번호] · 평일 09:00 ~ 18:00</span></div></aside></div>' +
+      '<section style="display:flex;flex-direction:column;gap:12px"><h2 class="h-sec">처리 결과 공개 (예시)</h2><div class="tbl-scroll"><table class="tbl" style="min-width:760px;font-size:14px"><thead><tr><th style="width:130px">접수번호</th><th style="width:100px">유형</th><th style="width:70px">접수일</th><th style="width:100px">상태</th><th>조치 내용</th></tr></thead><tbody>' +
+        COMPLAINTS.filter(function (c) { return c.open !== false; }).map(function (c) { return '<tr><td class="num" style="white-space:nowrap">' + c.no + '</td><td>' + c.type + '</td><td>' + c.date + '</td><td>' + cmpPill(c.st) + '</td><td>' + (c.act ? esc(c.act) : '<span style="color:var(--sub)">확인 중</span>') + '</td></tr>'; }).join('') +
+        '</tbody></table></div><p style="margin:0;color:var(--sub);font-size:13px">시안용 예시 데이터입니다. 실제 서비스에서는 공개 동의한 민원만 개인정보를 뺀 요약으로 게시합니다.</p></section>' +
+      '</div></div>';
+    return shop('', html);
+  }
+  function adminComplaints() {
+    var cnt = {}; CMP_TYPES.forEach(function (t) { cnt[t] = 0; }); COMPLAINTS.forEach(function (c) { cnt[c.type] = (cnt[c.type] || 0) + 1; });
+    var doneList = COMPLAINTS.filter(function (c) { return c.done; });
+    var avg = doneList.length ? Math.round(doneList.reduce(function (a, c) { return a + days(c.date, c.done); }, 0) / doneList.length * 10) / 10 : 0;
+    var body = '<div class="bo-stats"><div><small>전체 민원</small><b class="num">' + COMPLAINTS.length + '</b></div><div><small>처리 중</small><b class="num">' + COMPLAINTS.filter(function (c) { return c.st !== '처리 완료'; }).length + '</b></div><div><small>평균 처리 기간</small><b class="num">' + avg + '일</b></div><div><small>목표</small><b class="num">7일</b></div></div>' +
+      '<section><h2>■ 민원 목록</h2><div class="tbl-scroll"><table class="bo-tbl" style="font-size:13px;min-width:820px"><thead><tr><th>접수번호</th><th>유형</th><th>부품</th><th>접수일</th><th>상태</th><th>조치 내용</th><th style="width:96px">처리</th></tr></thead><tbody>' +
+        COMPLAINTS.map(function (c, i) { return '<tr><td>' + c.no + '</td><td>' + c.type + '</td><td>' + (c.part || '-') + '</td><td>' + c.date + '</td><td>' + cmpPill(c.st) + '</td><td>' + (c.act ? esc(c.act) : '-') + '</td><td>' + (c.st === '처리 완료' ? '' : '<button type="button" class="bo-btn sm" data-cst="' + i + '">' + (c.st === '접수' ? '확인 시작' : '처리 완료') + '</button>') + '</td></tr>'; }).join('') +
+      '</tbody></table></div></section>' +
+      '<section><h2>■ 유형별 집계 (개선 반영용)</h2><div class="tbl-scroll"><table class="bo-tbl" style="font-size:13px;min-width:480px"><thead><tr><th>유형</th><th>건수</th><th>반영 대상</th></tr></thead><tbody>' +
+        [['부품 불일치', '봉인 라벨·입고 사진 절차'], ['성적서 오류', '시험기관 입력 검수, 성적서 양식'], ['배송·파손', '포장 기준, 운송사'], ['교환·반품', '반품 정책 안내 화면'], ['판매자 응대', '판매자 등급 평가'], ['기타', '-']].map(function (r) { return '<tr><td>' + r[0] + '</td><td>' + (cnt[r[0]] || 0) + '</td><td>' + r[1] + '</td></tr>'; }).join('') +
+      '</tbody></table></div></section><div class="bo-panel">민원 유형별 건수는 매월 운영협의회(안)에 보고해 등급 기준과 판매자 등급 개정에 반영합니다. 수치는 예시입니다.</div>';
+    return adminLayout('admin-complaints', '민원 관리', body);
+  }
   function viewFaq() {
     var qa = [
       ['등급은 어떻게 정해지나요?', '시험 항목별 측정값을 기준과 비교해 정합니다. 전 항목이 기준 이내면 A등급, 주의 항목이 있으면 B등급, 부적합 항목이 있으면 C등급입니다.'],
@@ -1262,7 +1322,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       ['배송은 어떻게 되나요?', '중량물은 화물 배송(착불) 또는 방문 수령으로 진행합니다.'],
       ['세금계산서 발행이 되나요?', '주문서의 결제 수단에서 세금계산서 발행을 선택하시면 됩니다.']
     ];
-    return shop('', '<div class="wrap"><div class="page"><div><h1>자주 묻는 질문</h1></div><div class="qa">' + qa.map(function (x) { return '<details><summary><b>Q.</b><span>' + x[0] + '</span></summary><div class="ans">' + x[1] + '</div></details>'; }).join('') + '</div><p style="margin:0;color:var(--sub)">찾는 내용이 없으면 고객센터 [대표번호]로 문의해 주세요.</p></div></div>');
+    return shop('', '<div class="wrap"><div class="page"><div><h1>자주 묻는 질문</h1></div><div class="qa">' + qa.map(function (x) { return '<details><summary><b>Q.</b><span>' + x[0] + '</span></summary><div class="ans">' + x[1] + '</div></details>'; }).join('') + '</div><p style="margin:0;color:var(--sub)">찾는 내용이 없으면 고객센터 [대표번호]로 문의하시고, 거래 불만은 <a href="#complain">민원창구</a>에 접수해 주세요.</p></div></div>');
   }
   function viewCredits() {
     return shop('', '<div class="wrap"><div class="page"><div><h1>사진 출처</h1><p class="lead">이 사이트의 부품 사진은 화면 구성을 보여주기 위한 예시이며, 실제 판매 부품과 다릅니다. 모두 Wikimedia Commons의 자유 이용 사진입니다.</p></div><div class="tbl-scroll"><table class="tbl" style="min-width:560px"><thead><tr><th>파일</th><th>저작자</th><th>라이선스</th></tr></thead><tbody>' +
@@ -1295,7 +1355,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       var hm = { buyer: ['my', '마이페이지'], seller: ['seller', '판매자 센터'], lab: ['lab', '업무시스템'], tm: ['lab', '업무시스템'], admin: ['admin', '관리자 화면'] }[u.role];
       parts = ['<span><b>' + esc(u.org) + ' ' + esc(u.name) + '</b>님</span>', '<a href="#' + hm[0] + '">' + hm[1] + '</a>', '<a href="#alerts">알림' + (n ? ' <b class="badge-n">' + n + '</b>' : '') + '</a>', '<button type="button" class="linkbtn" data-logout>로그아웃</button>'];
     } else parts = ['<a href="#login" data-next>로그인</a>', '<a href="#join">회원가입</a>'];
-    return parts.concat(['<a href="#compare">비교함 ' + state.compare.length + '</a>', '<a href="#verify">성적서 진위확인</a>', '<a href="#faq">고객센터</a>']).join('');
+    return parts.concat(['<a href="#compare">비교함 ' + state.compare.length + '</a>', '<a href="#verify">성적서 진위확인</a>', '<a href="#complain">민원창구</a>', '<a href="#faq">고객센터</a>']).join('');
   }
   function login(acc) {
     state.user = acc; saveUser(acc.key || null);
@@ -1821,7 +1881,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
   ];
   function adminLayout(active, title, body) {
     var wait = MEMBERS.filter(function (m) { return m.st === '승인 대기'; }).length;
-    var nav = [['운영'], ['admin', '대시보드'], ['admin-members', '회원 승인' + (wait ? ' (' + wait + ')' : '')], ['admin-trades', '거래·정산'], ['기준·콘텐츠'], ['admin-criteria', '등급 기준 관리'], ['admin-notices', '공지 관리'], ['바로가기'], ['price', '시세 정보'], ['standard', '인증 기준(공개)']];
+    var nav = [['운영'], ['admin', '대시보드'], ['admin-members', '회원 승인' + (wait ? ' (' + wait + ')' : '')], ['admin-trades', '거래·정산'], ['admin-complaints', '민원 관리' + (COMPLAINTS.filter(function (c) { return c.st !== '처리 완료'; }).length ? ' (' + COMPLAINTS.filter(function (c) { return c.st !== '처리 완료'; }).length + ')' : '')], ['기준·콘텐츠'], ['admin-criteria', '등급 기준 관리'], ['admin-notices', '공지 관리'], ['바로가기'], ['price', '시세 정보'], ['standard', '인증 기준(공개)']];
     return boLayout(active, title, '관리자 &gt; ' + title, body, nav, '관리자');
   }
   function viewAdmin(sub) {
@@ -1830,6 +1890,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     if (sub === 'trades') return adminTrades();
     if (sub === 'criteria') return adminCriteria();
     if (sub === 'notices') return adminNotices();
+    if (sub === 'complaints') return adminComplaints();
     return adminDash();
   }
   function days(a, b) { var p = function (s) { var x = s.split('.'); return new Date(2026, Number(x[0]) - 1, Number(x[1])); }; return Math.round((p(b) - p(a)) / 864e5); }
@@ -1904,6 +1965,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     var routeBase = am ? h : key + (id ? '-' + id : '');
     if (key === 'join' && lastRoute !== 'join') state.joinDone = null;
     if (key === 'qna' && lastRoute !== 'qna') state.qnaDone = false;
+    if (key === 'complain' && lastRoute !== 'complain') { state.cmpDone = ''; state.cmpLook = ''; }
     if (key === 'request' && lastRoute !== 'request') state.reqDone = '';
     if (key === 'part' && byId[id]) state.recent = [id].concat(state.recent.filter(function (x) { return x !== id; })).slice(0, 5);
     state.catOpen = false;
@@ -1933,6 +1995,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       case 'admin': html = viewAdmin(sub); break;
       case 'notice': html = viewNotice(); break;
       case 'qna': html = viewQna(); break;
+      case 'complain': html = viewComplain(); break;
       case 'join': html = viewJoin(); break;
       case 'my': html = viewMy(sub); break;
       case 'seller': html = viewSeller(sub); break;
@@ -2002,6 +2065,8 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
       state.critDraft = null; rerender(); toast('등급 기준 ' + CRIT_VER + '를 적용했습니다.'); return;
     }
     if ((g = e.target.closest('[data-settle]'))) { var so = ORDERS.filter(function (o) { return o.no === g.dataset.settle; })[0]; so.settled = true; notify('seller', '주문 ' + so.no + ' 정산 완료: ' + won(so.price - Math.round(so.price * 0.05)) + '원', 'seller-settle'); rerender(); toast('정산 처리했습니다.'); return; }
+    if ((g = e.target.closest('[data-cst]'))) { var cc = COMPLAINTS[Number(g.dataset.cst)]; if (cc.st === '접수') { cc.st = '사실 확인 중'; toast('사실 확인을 시작했습니다.'); } else { cc.st = '처리 완료'; cc.done = TODAY.slice(5); cc.act = cc.act ? cc.act.replace(/ 중$/, ' 완료, 결과 안내') : '처리 결과를 민원인에게 안내함'; toast('처리 완료로 바꿨습니다.'); } rerender(); return; }
+    if ((g = e.target.closest('[data-cmpnew]'))) { state.cmpDone = ''; rerender(); return; }
     if ((g = e.target.closest('[data-ndel]'))) { NOTICES.splice(Number(g.dataset.ndel), 1); rerender(); toast('공지를 삭제했습니다.'); return; }
     if ((g = e.target.closest('[data-catmenu]'))) { state.catOpen = !state.catOpen; document.getElementById('catPanel').hidden = !state.catOpen; g.setAttribute('aria-expanded', String(state.catOpen)); return; }
     if ((g = e.target.closest('[data-typeonly]'))) { state.type = g.dataset.typeonly; state.grades = { A: true, B: true, C: true }; state.use = '전체'; state.q = ''; state.maker = ''; state.car = ''; state.year = ''; if (location.hash === '#list') { e.preventDefault(); rerender(); } return; }
@@ -2103,6 +2168,15 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     }
     if (f.id === 'shopForm') { state.shopSido = document.getElementById('shSido').value; state.shopGu = document.getElementById('shGu').value; if (location.hash !== '#shops') location.hash = 'shops'; else rerender(); return; }
     if (f.id === 'homeVerify') { var hv = document.getElementById('hv').value.trim(); location.hash = hv ? 'verify-' + hv : 'verify'; return; }
+    if (f.id === 'cmpForm') {
+      var cok = ['cpTitle', 'cpBody', 'cpPhone'].map(need).every(Boolean);
+      var cag = document.getElementById('cpAgree').checked; document.getElementById('cpAgreeErr').hidden = cag;
+      if (!cok || !cag) return;
+      var cno = 'C-2611-' + String(COMPLAINTS.length + 5).padStart(4, '0');
+      COMPLAINTS.unshift({ no: cno, type: document.getElementById('cpType').value, part: document.getElementById('cpPart').value.trim(), date: TODAY.slice(5), st: '접수', done: '', act: '', open: document.getElementById('cpOpen').checked });
+      state.cmpDone = cno; rerender(); window.scrollTo(0, 0); return;
+    }
+    if (f.id === 'cmpLook') { state.cmpLook = document.getElementById('clNo').value.trim(); rerender(); return; }
     if (f.id === 'qnaForm') {
       var qok = ['qnTitle', 'qnBody'].map(need).every(Boolean); if (!qok) return;
       state.qnaDone = true; rerender(); window.scrollTo(0, 0); return;
