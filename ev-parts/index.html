@@ -621,7 +621,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     ['Electric motor and transmission in a truck.jpg', 'Foxcorner', 'CC BY-SA 4.0'],
     ['Toyota Prius PHV on-board charger. Spielvogel.jpg', 'Spielvogel', 'CC BY-SA 4.0']
   ];
-  function imgUrl(i, w) { return 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(IMG[i][0]) + '?width=' + w; }
+  function imgUrl(i, w) { return 'img/p' + i + '.webp'; }
   function photo(i, w, alt) { return '<img src="' + imgUrl(i, w) + '" alt="' + alt + '" loading="lazy" onerror="this.remove()">'; }
   function P(id, maker, car, year, km, price, v, d, imgs, type) {
     return { id: id, maker: maker, car: car, year: year, km: km, price: price, v: v, d: d, imgs: imgs, type: type || 'motor' };
