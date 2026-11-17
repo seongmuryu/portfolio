@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>EV부품이력 시안</title>
+<title>리브이 파츠 Re:EV Parts</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap">
 <style>
@@ -38,7 +38,10 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
 .site-header { border-bottom: 1px solid var(--line); background: #FFFFFF; }
 .site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 32px; min-height: 64px; padding-block: 8px; }
 .logo { font-size: 21px; font-weight: 700; letter-spacing: -0.03em; text-decoration: none; }
-.logo small { font-size: 11px; font-weight: 400; color: var(--sub); margin-left: 4px; }
+.logo small { font-size: 11px; font-weight: 400; color: var(--sub); margin-left: 6px; }
+.logo i { font-style: normal; color: var(--brand); margin: 0 1px; }
+.logo .pt { font-weight: 500; margin-left: 5px; }
+.bo-i { font-style: normal; color: #6FD3A2; }
 .gnb { display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 15px; }
 .gnb a { text-decoration: none; color: #4A4B50; padding: 6px 0; }
 .gnb a.on { color: var(--ink); font-weight: 700; }
@@ -774,7 +777,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
   function header(active) {
     var nav = [['list', '부품 찾기'], ['price', '시세'], ['request', '부품 의뢰'], ['standard', '인증 기준'], ['shops', '장착점'], ['sell', '판매 등록']];
     return '<header class="site-header"><div class="util-bar"><div class="wrap">' + util() + '</div></div><div class="wrap">' +
-      '<a class="logo" href="#home">EV부품이력<small>가칭</small></a>' +
+      '<a class="logo" href="#home" aria-label="리브이 파츠 Re:EV Parts">Re<i>:</i>EV<span class="pt">Parts</span><small>리브이 파츠</small></a>' +
       '<nav class="gnb" aria-label="주 메뉴">' + nav.map(function (n) { return '<a href="#' + n[0] + '"' + (n[0] === active ? ' class="on" aria-current="page"' : '') + '>' + n[1] + '</a>'; }).join('') + '</nav>' +
       '<form class="search" id="topSearch" role="search"><label class="sr" for="q">부품 검색</label><input id="q" type="search" placeholder="품번, 고유번호, 차종으로 검색" value="' + esc(state.q) + '"><button class="icon-btn" type="submit" aria-label="검색">' + ICON_SEARCH + '</button></form>' +
       '</div></header>' +
@@ -1280,7 +1283,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
     var stepTxt = [['01', '접수', '홈페이지 민원창구, 고객센터 전화'], ['02', '1차 답변', '영업일 기준 1일 안 담당자 배정·연락'], ['03', '사실 확인', 'QR 이력, 봉인 라벨 사진, 장비 원본 파일, 판매자·시험기관 의견'], ['04', '처리 결과 안내', '접수 후 7일 안 (추가 시험이 필요하면 일정 안내)'], ['05', '개선 반영', '월별 유형 집계 → 등급 기준·판매자 등급·화면 개선']];
     var html = '<div class="wrap"><div class="page" style="max-width:none">' +
       '<div><h1>민원창구</h1><p class="lead">부품 불일치, 성적서 오류, 배송·반품 같은 거래 불만을 접수하면 처리 단계와 결과를 공개합니다.</p></div>' +
-      '<div class="note">EV부품이력은 판매자와 구매자를 잇는 통신판매중개자이며 거래 당사자가 아닙니다. 다만 판매자와 구매자 사이의 불만·분쟁은 아래 절차에 따라 접수부터 처리까지 함께 확인합니다. 처리 결과에 동의하지 않으면 1372 소비자상담센터 등 외부 기관에 상담·조정을 신청할 수 있습니다.</div>' +
+      '<div class="note">리브이 파츠(Re:EV Parts)는 판매자와 구매자를 잇는 통신판매중개자이며 거래 당사자가 아닙니다. 다만 판매자와 구매자 사이의 불만·분쟁은 아래 절차에 따라 접수부터 처리까지 함께 확인합니다. 처리 결과에 동의하지 않으면 1372 소비자상담센터 등 외부 기관에 상담·조정을 신청할 수 있습니다.</div>' +
       '<section style="display:flex;flex-direction:column;gap:12px"><h2 class="h-sec">처리 절차와 기한</h2><ol class="steps">' + stepTxt.map(function (x) { return '<li><span class="n">' + x[0] + '</span><b>' + x[1] + '</b><small>' + x[2] + '</small></li>'; }).join('') + '</ol></section>' +
       '<div class="form-page" style="padding-block:0"><form class="form-main" id="cmpForm" novalidate><h2 class="h-sec" style="margin:0">민원 접수</h2>' +
         '<div class="fgrid"><div class="field"><label for="cpType">민원 유형</label><select id="cpType">' + CMP_TYPES.map(function (t) { return '<option>' + t + '</option>'; }).join('') + '</select></div>' + fieldInput('cpPart', '주문번호 또는 부품 고유번호', '예: EVM-2611-00417', false) + '</div>' +
@@ -1568,7 +1571,7 @@ button, input, select, textarea { font-family: inherit; font-size: 14px; color: 
   function boLayout(active, title, crumb, body, navX, sysX) {
     var u = state.user, wait = RECEIPTS.filter(function (r) { return r.st === 'review'; }).length;
     var nav = navX || [['시험관리'], ['lab', '시험 접수 현황'], ['lab-input', '시험결과 입력'], ['lab-approve', '결재 대기' + (wait ? ' (' + wait + ')' : '')], ['lab-dispatch', '인력 파견'], ['성적서관리'], ['lab-issued', '발행 내역'], ['lab-fix', '정정·재발행'], ['기준정보'], ['standard', '시험항목·기준'], ['lab-equip', '장비·교정 정보']];
-    return '<div class="bo"><header class="bo-top"><div class="in"><b>EV부품이력 <span>| ' + (sysX || '시험기관 업무시스템') + '</span></b><div style="display:flex;gap:14px;align-items:center;font-size:13px;flex-wrap:wrap"><span style="color:#FFFFFF">' + esc(u.org) + ' ' + esc(u.name) + ' ' + u.label + '</span><a href="#alerts">알림' + (unread() ? ' ' + unread() : '') + '</a><a href="#home">구매자 사이트</a><button type="button" class="bo-out" data-logout>로그아웃</button></div></div></header>' +
+    return '<div class="bo"><header class="bo-top"><div class="in"><b>Re<i class="bo-i">:</i>EV Parts <span>| ' + (sysX || '시험기관 업무시스템') + '</span></b><div style="display:flex;gap:14px;align-items:center;font-size:13px;flex-wrap:wrap"><span style="color:#FFFFFF">' + esc(u.org) + ' ' + esc(u.name) + ' ' + u.label + '</span><a href="#alerts">알림' + (unread() ? ' ' + unread() : '') + '</a><a href="#home">구매자 사이트</a><button type="button" class="bo-out" data-logout>로그아웃</button></div></div></header>' +
       '<div class="bo-body"><nav class="bo-nav" aria-label="업무 메뉴">' + nav.map(function (n) { return n.length === 1 ? '<div class="g">' + n[0] + '</div>' : '<a href="#' + n[0] + '"' + (n[0] === active ? ' class="on" aria-current="page"' : '') + '>' + n[1] + '</a>'; }).join('') + '</nav>' +
       '<main class="bo-main"><div class="bo-title"><h1>' + title + '</h1><span>' + crumb + '</span></div>' + body + '</main></div></div>';
   }
